@@ -7,9 +7,104 @@
 // File with header styles
 @import '_header.styl'
 
+// ~~~~~~~~ journey section~~~~~~~~~
 
-// Main styles start here
+// journey
+.journey_wrapper
+	padding 125px 0 342px 0
+	background url(../img/spine-top.png) left top no-repeat
+	// background-size 100% 100%
+.journey_descr
+	color $text-color
+	line-height 30px
+	
+// ~~~~~~ The alps section ~~~~~~~~~~
 
+.alps_wrapper
+	padding 42px 0 0 0
+	
 
-// File with media quaeries styles
+.alps_title,
+.journey_title
+	margin-bottom 70px 
+	display inline-block
+	position relative
+	text-transform uppercase
+	color $text-color
+	font-size 150px
+	font-family 'FuturaHeavy', Arial, sans-serif
+	
+.alps_title
+	&:after
+		content 'To explore'
+		text-transform none
+		position absolute
+		top -15px
+		left 0
+		font-size 30px
+		color $text-color
+		font-family 'FuturaMedium', Arial, sans-serif
+		text-align left
+		
+.journey_title
+	&:after
+		content 'Plan your'
+		text-transform none
+		position absolute
+		top -15px
+		left 0
+		font-size 30px
+		color $text-color
+		font-family 'FuturaMedium', Arial, sans-serif
+		text-align left
+	
+.alps_descr
+	color #000
+	line-height 30px
+
+// ~~~~~~ Countries section ~~~~~~
+.countries_wrapper
+	padding 487px 0 149px 0
+	background url(../img/spine-bottom.png) left top no-repeat 
+	// background-size 100% 100%
+	
+.country
+	margin-bottom 90px
+	&:last-child
+		margin-bottom 0
+.country_img-wrap
+	float left
+	padding-top 15px
+	.country_img
+		width 100%
+		height auto
+
+.country_descr
+	margin-left 390px
+	padding 40px 0
+	text-align left
+	.country_name,
+	.country_direction
+		font-family "FuturaHeavy", Arial, sans-serif
+		color $text-color
+	.country_name
+		font-size 60px
+		margin 0 0 40px 0 
+	.country_direction
+		font-size 30px
+		line-height 30px
+		margin 0 0 24px 0 
+		.arrow
+			display inline-block
+			margin 0 18px
+			width 68px
+			height 23px
+			background url(../img/arrow-span.png) no-repeat center center
+	.country_price
+		font-family "FuturaHeavy", Arial, sans-serif
+		color $blue-color
+		font-size 30px
+
+@import '_footer.styl'
+
 @import '_media.styl'

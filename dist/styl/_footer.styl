@@ -1,0 +1,41 @@
+// File with all variables styles
+@import '_vars.styl'
+
+// ~~~~~~~~~ Footer ~~~~~~~~~~
+
+.footer
+	background #fff url(../img/footer-bg.png) no-repeat left top 
+	background-size cover
+	padding 134px 50px 66px 50px
+
+.footer_copy
+	float left
+	text-align left
+	.transfer_copy
+		font-family "FuturaHeavy", Arial, sans-serif
+		color $text-color
+		.copy_year
+			font-family "FuturaMedium", Arial, sans-serif
+
+.footer_nav
+	float right
+
+.footer_menu
+	padding 0
+	margin 0
+	list-style 0
+	.footer_menu--item
+		display inline-block
+		margin-right 70px
+		&:last-child
+			margin-right 0
+		a
+			color $text-color
+			display block
+			font-family "FuturaMedium", Arial, sans-serif
+			transition all .25s ease-in-out
+			text-decoration none
+			border-bottom 7px solid transparent
+			&:hover
+				text-decoration none
+				border-bottom 7px solid $blue-color

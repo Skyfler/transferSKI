@@ -27,11 +27,11 @@
 	padding-top 13px
 	font-family "FuturaMedium", Arial, sans-serif
 	text-decoration none
-	border-bottom 4px solid transparent
+	border-bottom 7px solid transparent
 	transition all .25s ease-in-out
 	&:hover
 		text-decoration none
-		border-bottom 4px solid $blue-color
+		border-bottom 7px solid $blue-color
 	
 .top_line-phone.hidden_phone
 	display none
@@ -229,46 +229,97 @@
 // 			margin-left 0
 
 // ~~~~~~~~ header~~~~~~~~~~~~
-.bg_height
-	height 1000px
-#header
+// .header
+// 	position relative
+// .bg_height
+// 	height 100vh
+// .header_parallax
+// 	position relative
+// 	width 100%
+// 	@extend .bg_height
+
+// .layer 
+// 	background-position bottom center
+// 	background-size auto
+// 	background-repeat no-repeat
+// 	width 100%
+// 	@extend .bg_height
+// 	position fixed
+// 	z-index -1
+
+// .header_parallax,
+// .layer
+// 	min-heigth 771px
+	
+// .layer-bg
+// 	background url(../img/sky.png) no-repeat top center
+// 	z-index 1
+// 	background-size 100%
+
+// .layer-1
+// 	background url(../img/transfer.png) no-repeat center 18% 
+// 	z-index 2
+	
+// .layer-2
+// 	background url(../img/mountain-2.png) no-repeat bottom center 
+// 	background-size 100%
+// 	z-index 3
+	
+// .layer-4
+// 	background url(../img/clouds.png) no-repeat center center
+// 	z-index 4
+// 	background-size 100%
+	
+// .layer-5
+// 	background url(../img/ski.png) no-repeat center 30% 
+// 	z-index 5
+
+// section
+// 	position relative
+	
+header
+	height 100vh
 	position relative
-	overflow hidden
-	width 100%
-	@extend .bg_height
-
-.layer 
-	background-position bottom center
-	background-size auto
-	background-repeat no-repeat
-	width 100%
-	@extend .bg_height
-	position fixed
-	z-index -1
-
-#header,
-.layer
-	min-heigth 771px
-	
-.layer-bg
+.header
 	background url(../img/sky.png) no-repeat top center
-	z-index 1
-	background-size 100%
+	background-size cover
+	background-position fixed
 
-.layer-1
-	background url(../img/transfer.png) no-repeat center 18% 
+.header_text
+	width 920px
+	height 200px
+	background url(../img/transfer.png) no-repeat
+	position absolute
+	top 18%
+	left 50%
+	margin-left -460px
 	z-index 2
-	
-.layer-2
+
+.header_rock
+	width 100%
+	height 100%
+	position absolute
 	background url(../img/mountain-2.png) no-repeat bottom center 
+	background-attachment fixed
+
 	background-size 100%
 	z-index 3
-	
-.layer-4
+
+
+.header_cloud
+	position absolute
+	width 100%
+	height 100%
 	background url(../img/clouds.png) no-repeat center center
 	z-index 4
 	background-size 100%
-	
-.layer-5
-	background url(../img/ski.png) no-repeat center 30% 
+
+.header_ski
+	width 350px
+	height 270px
+	background url(../img/ski.png) no-repeat
+	position absolute
+	top 30%
+	left 50%
 	z-index 5
+	margin-left -175px

@@ -33,25 +33,41 @@
     //                 allowEmptyOption: true,
     //                 create: true
     //             });
+
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        $('.header_text').css({
+            'transform' : 'translate(0%, -' + st / 4 + '%'
+        });
+
+        $('.header_ski').css({
+            'transform' : 'translate(0%, -' + st / 5 + '%'
+        });
+
+        $('.header_cloud').css({
+            'transform' : 'translate(0%, -' + st / 3 + '%'
+        });
+
+    });
  }(jQuery));  
 
 
-window.addEventListener('scroll', function(event) {
-  var depth, i, layer, layers, len, movement, topDistance, translate3d;
-  topDistance = this.pageYOffset;
-  console.log(topDistance);
-  layers = document.querySelectorAll("[data-type='parallax']");
-  for (i = 0, len = layers.length; i < len; i++) {
-    layer = layers[i];
-    depth = layer.getAttribute('data-depth');
-    movement = -(topDistance * depth);
-    translate3d = 'translate3d(0, ' + movement + 'px, 0)';
-    layer.style['-webkit-transform'] = translate3d;
-    layer.style['-moz-transform'] = translate3d;
-    layer.style['-ms-transform'] = translate3d;
-    layer.style['-o-transform'] = translate3d;
-    layer.style.transform = translate3d;
-  }
+// window.addEventListener('scroll', function(event) {
+//   var depth, i, layer, layers, len, movement, topDistance, translate3d;
+//   topDistance = this.pageYOffset;
+//   console.log(topDistance);
+//   layers = document.querySelectorAll("[data-type='parallax']");
+//   for (i = 0, len = layers.length; i < len; i++) {
+//     layer = layers[i];
+//     depth = layer.getAttribute('data-depth');
+//     movement = -(topDistance * depth);
+//     translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+//     layer.style['-webkit-transform'] = translate3d;
+//     layer.style['-moz-transform'] = translate3d;
+//     layer.style['-ms-transform'] = translate3d;
+//     layer.style['-o-transform'] = translate3d;
+//     layer.style.transform = translate3d;
+//   }
 
   // var trans = document.getElementById('transfer');
   // if(topDistance >= 1600) {
@@ -59,16 +75,17 @@ window.addEventListener('scroll', function(event) {
   //   } else {
   //       trans.style.cssText = "opacity: 1;"
   //   }   
-});
+// });
 
 window.addEventListener('scroll', function(e) {
     var logo = document.getElementById('transfer_logo'),
         top = this.pageYOffset;
         
-   if(top >= 1600) {
-        logo.style.cssText = "opacity: 1;"
+   if(top >= 400) {
+        logo.style.cssText = "opacity: 1;";
+
     } else {
-        logo.style.cssText = "opacity: 0;"
+        logo.style.cssText = "opacity: 0;";
     }   
 
 });
