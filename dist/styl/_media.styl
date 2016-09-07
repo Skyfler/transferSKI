@@ -13,6 +13,9 @@
 		width 700px
 		margin-left -350px
 		top 25%
+	// countries
+	.country_descr
+		margin-left 320px
 
 +max-screen(1100px)
 	// journey
@@ -64,6 +67,21 @@
 	.journey_title,
 	.alps_title
 		font-size 105px
+	// country
+	.country_descr
+		margin-left 330px
+		padding 37px 0
+		.country_name
+			font-size 40px
+		.country_direction
+			font-size 20px
+			.arrow
+				margin 0 5px
+				height 17px
+		.country_price
+			margin 0
+
+		
 	// footer
 	.footer_menu
 		.footer_menu--item
@@ -104,7 +122,25 @@
 	.alps_title:after, 
 	.journey_title:after
 		font-size 20px
-
+		
+	// countries
+	.country
+		margin-bottom 30px
+	.countries_wrapper
+		background-size 100% 30%
+		padding 340px 0 100px
+	.country_img-wrap
+		float none
+		padding 0
+		.country_img
+			width 50%
+	
+	.country_wrap
+		text-align center
+		padding 0 40px
+	
+	.country_descr
+		margin-left 0
 	// footer
 	.footer
 		padding 40px 20px
@@ -131,6 +167,20 @@
 	.journey_title,
 	.alps_title
 		font-size 70px
+		
+	// country
+	.countries_wrapper
+		background-size 100% 15%
+		padding-top 290px
+	
+	.country_img-wrap
+		.country_img
+			width 100%
+	
+	.country_descr
+		.country_direction
+			font-size 25px
+	
 
 +max-screen(421px)
 	// mobile menu
@@ -172,8 +222,32 @@
 	.alps_descr
 			font-size 14px
 			line-height 25px
+			
+	// country
+	.country
+		margin-bottom 50px
+	.countries_wrapper
+		padding-top 230px
+	.country_wrap
+		padding 0 20px
+	.country_descr
+		padding 0
+	.country_descr
+		.country_name
+			margin 10px 0
+			font-size 20px
+		.country_direction
+			margin 0 0 10px 0
+			font-size 18px
+		.country_price
+			font-size 18px
 	// footer
 	.mobile_footer-phone
 		font-size 14px
+
++max-screen(380px)
+	// country
+	.countries_wrapper
+		padding-top 190px
 	
 
