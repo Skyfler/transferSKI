@@ -12,12 +12,35 @@
 	.header_text
 		width 700px
 		margin-left -350px
-		top 20%
+		top 25%
+
++max-screen(1100px)
+	// journey
+	.journey_wrapper
+		padding-bottom 250px
+	.alps_title, 
+	.journey_title
+		font-size 130px
+		margin-bottom 40px
 		
 +max-screen(992px)
 	// Header
 	.top_line
 		padding 18px 20px
+		
+	.mobile_menu-list 
+		.mobile_menu-item 
+			a
+				font-size 25px
+	.mobile_language-list
+		.mobile_lang-item
+			a
+				font-size 20px
+	
+	.header_text
+		top 40%
+	.header_ski
+		top 55%
 	.mobile_logo
 		display block
 	.menu_show
@@ -34,6 +57,13 @@
 	.header_ski
 		width 270px
 		margin-left -135px
+		
+	// journey
+	.journey_wrapper
+		text-align right
+	.journey_title,
+	.alps_title
+		font-size 105px
 	// footer
 	.footer_menu
 		.footer_menu--item
@@ -63,6 +93,18 @@
 	.menu_close
 		right 0
 		
+	// journey
+	.journey_wrapper
+		padding-bottom 210px
+		
+	.alps_title,
+	.journey_title
+		font-size 90px
+		margin-bottom 20px
+	.alps_title:after, 
+	.journey_title:after
+		font-size 20px
+
 	// footer
 	.footer
 		padding 40px 20px
@@ -70,10 +112,68 @@
 		display none
 	.mobile_footer-phone
 		display inline-block
-		
-+max-screen(421px)
 
++max-screen(766px)
+	.journey_text
+		padding 0 20px 0 220px
+	.alps_text
+		padding 0 220px 0 20px
+		
+		
++max-screen(630px)
+	// journey
+	.journey_wrapper
+		padding-bottom 180px	
+		padding-top 60px	
+		
+	.journey_title-wrap
+		padding-left 190px
+	.journey_title,
+	.alps_title
+		font-size 70px
+
++max-screen(421px)
+	// mobile menu
+	.mobile_menu-list 
+		.mobile_menu-item 
+			a
+				font-size 16px
+	.mobile_language-list
+		.mobile_lang-item
+			a
+				font-size 16px
+				
+	// journey
+	.journey_wrapper
+		padding-bottom 240px
+	
+	.journey_title-wrap
+		padding-left 100px
+		text-align left
+	.journey_title,
+	.alps_title
+		font-size 45px
+		&:after
+			font-size 16px
+	
+	.journey_text
+		padding-left 100px
+		.journey_descr
+			font-size 14px
+			line-height 25px
+	
+	// alps
+	.alps_wrapper
+		padding 0
+	.alps_title-wrap
+		text-align left
+	.alps_text
+		padding 0 40px 0 20px !important
+	.alps_descr
+			font-size 14px
+			line-height 25px
 	// footer
 	.mobile_footer-phone
 		font-size 14px
 	
+
