@@ -8,4 +8,72 @@
 +max-screen-height(maxHeight)
 +min-screen-height(minHeight)
 */
++max-screen(1200px)
+	.header_text
+		width 700px
+		margin-left -350px
+		top 20%
+		
++max-screen(992px)
+	// Header
+	.top_line
+		padding 18px 20px
+	.mobile_logo
+		display block
+	.menu_show
+		display inline-block
+		width 18px
+		height 18px
+		padding-top 30px
+		background url(../img/toggle.png) no-repeat center center no-repeat
+	.dropdowns_wrapper,
+	.top_line-logo,
+	.top_line-contacts
+		display none
+	// parallax
+	.header_ski
+		width 270px
+		margin-left -135px
+	// footer
+	.footer_menu
+		.footer_menu--item
+			margin-right 40px
+			&:last-child
+				margin-right 0
 
++max-screen(850px) 
+	// footer
+	.footer_menu
+		.footer_menu--item
+			margin-right 30px
+			&:last-child
+				margin-right 0
+		
++max-screen(769px)
+	// header
+	.header_text,
+	.header_rock,
+	.header_cloud,
+	.header_ski
+		display none
+	.header
+		background url(../img/header-bg.png) no-repeat center bottom
+		background-size cover
+	// mobile menu
+	.menu_close
+		right 0
+		
+	// footer
+	.footer
+		padding 40px 20px
+	.footer_nav
+		display none
+	.mobile_footer-phone
+		display inline-block
+		
++max-screen(421px)
+
+	// footer
+	.mobile_footer-phone
+		font-size 14px
+	

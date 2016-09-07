@@ -1,0 +1,120 @@
+.dropdown_wrap {
+    /* Size and position */
+    position: relative; /* Enable absolute positionning for children and pseudo elements */
+    width: 70px;
+    padding: 12px;
+    display: inline-block;
+    /* Styles */
+    background: #fff;
+    border: 4px solid transparent;
+    border-bottom: none;
+    transition:  all .25s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    color: #14213c;
+    font-family: "FuturaMedium", Arial, sans-serif;
+    font-size: 16px;
+}
+
+    
+
+.dropdown_wrap:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    background: url(../img/arrow-down.svg);
+    background-repeat: no-repeat;
+    right: 10px;
+    top: 50%;
+    cursor: pointer;
+    margin-top: -3px;
+
+}
+
+.dropdown_wrap .dropdown {
+  /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: -4px;
+    right: 0px;
+    width: 70px;
+    padding: 12px;
+    border: 4px solid #f1f1f1;
+    border-top:  none;
+
+    /* Styles */
+    background: white;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    list-style: none;
+
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropdown_wrap .dropdown li a,
+.first_item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+#dd2 .dropdown li {
+    margin-bottom: 20px;
+}
+
+#dd2 .dropdown li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Hover state */
+
+.dropdown_wrap .dropdown li:hover a {
+    color: #79e9ee;
+}
+
+.first_item:hover {
+    color: #79e9ee;
+    text-decoration: none;
+}
+
+/* Active state */
+.dropdown_wrap.active {
+    border: 4px solid #f1f1f1;
+    border-bottom: none;
+}
+
+.dropdown_wrap.active:after {
+    background: url(../img/arrow-top.svg);
+    background-repeat: no-repeat;
+}
+
+.dropdown_wrap.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* No CSS3 support */
+
+.no-opacity   .dropdown_wrap .dropdown,
+.no-pointerevents .dropdown_wrap .dropdown {
+    display: none;
+    opacity: 1; /* If opacity support but no pointer-events support */
+    pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity .dropdown_wrap.active .dropdown,
+.no-pointerevents .dropdown_wrap.active .dropdown {
+    display: block;
+}

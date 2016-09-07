@@ -9,7 +9,6 @@
 	padding 134px 50px 66px 50px
 
 .footer_copy
-	float left
 	text-align left
 	.transfer_copy
 		font-family "FuturaHeavy", Arial, sans-serif
@@ -18,7 +17,7 @@
 			font-family "FuturaMedium", Arial, sans-serif
 
 .footer_nav
-	float right
+	text-align right
 
 .footer_menu
 	padding 0
@@ -39,3 +38,14 @@
 			&:hover
 				text-decoration none
 				border-bottom 7px solid $blue-color
+				
+.mobile_footer-phone
+	color $text-color
+	display none
+	font-family "FuturaMedium", Arial, sans-serif
+	transition all .25s ease-in-out
+	text-decoration none
+	border-bottom 7px solid transparent
+	&:hover
+		text-decoration none
+		border-bottom 7px solid $blue-color
