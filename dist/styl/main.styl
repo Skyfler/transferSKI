@@ -111,133 +111,135 @@
 		font-size 30px
 		
 // ~~~~~~~~ search form ~~~~~~~~
-.search_form-wrap
-	position absolute
-	z-index 10
-	top 100%
-	left 50%
-	transform  translate(-50%, -50%)
-.search
-	padding 38px
-	background $purple-color
-	text-align left
-	width 50%
-
-.search_direction-wrap
-	position relative
-	padding-left 40px
-	.search_arrow
-		cursor pointer
-		display block
-		position absolute
-		top 5px
-		left 0
-		width 22px
-		height 98px
-		background url(../img/arrow-sprite.png) no-repeat
-		background-position 0 -98px
-		transition all .25s ease-in-out
-		
-	.arrow_active
-		cursor pointer
-		display block
-		position absolute
-		top 5px
-		left 0
-		width 22px
-		height 98px
-		background url(../img/arrow-sprite.png) no-repeat
-		transition all .25s ease-in-out
-		background-position 0 0 !important
-
-
-.search_direction
-	width 100%
-	margin-bottom 45px
+.search_wrapper
 	background-color transparent
-	color #fff
-	font-size 20px
-	padding 0 8px 8px 0
-	display block
-	border none
-	border-bottom 1px solid #aa7bff
-	box-shadow none
-	outline none
-	transition all .25s ease-in-out
-	&:focus
-		border-bottom 1px solid #fff
-input.search_direction::-webkit-input-placeholder 
-	color #aa7bff
-	font-size 20px
-input.search_direction::-moz-placeholder          
-	color #aa7bff
-	font-size 20px
-input.search_direction:-moz-placeholder           
-	color #aa7bff
-	font-size 20px
-input.search_direction:-ms-input-placeholder      
-	color #aa7bff
-	font-size 20px
+	position relative
+	// bottom 50%
+	// left 50%
+	// margin-left -50%
+	// margin-top -50%
+	// z-index 6
 
 
-.search_title
+.search_form
+	width 50%
+	padding 35px
+	background-color $purple-color
+
+.search_form-to
+	float left
+
+.search_form-from
+	float right
+	position relative
+	overflow hidden
+	
+// Form TO
+.search_form-title
 	font-size 20px
 	font-family "FuturaHeavy", Arial, sans-serif
 	text-transform uppercase
 	color $blue-color
 	margin 0 0 35px 0
+.search_form-direction
+	position relative
+	padding-left 40px
+	margin-bottom 45px
+	.search_form-arrow,
+	.search_form-arrow--active
+		cursor pointer
+		display block
+		position absolute
+		top 5px
+		left 0
+		width 22px
+		height 98px
+		background url(../img/arrow-sprite.png) no-repeat
+		
+		transition all .25s ease-in-out
+	.search_form-arrow
+		background-position 0 -98px
+	.search_form-arrow--active
+		background-position 0 0 !important
 	
-.search_date-wrap
+	.search_input
+		width 100%
+		margin-bottom 45px
+		background-color transparent
+		color #fff
+		font-size 20px
+		padding 0 8px 8px 0
+		display block
+		border none
+		border-bottom 1px solid #aa7bff
+		box-shadow none
+		outline none
+		transition all .25s ease-in-out
+		&:focus
+			border-bottom 1px solid #fff
+		&:last-child
+			margin-bottom 0
+			
+	input.search_input::-webkit-input-placeholder 
+		color #aa7bff
+		font-size 20px
+	input.search_input::-moz-placeholder          
+		color #aa7bff
+		font-size 20px
+	input.search_input:-moz-placeholder           
+		color #aa7bff
+		font-size 20px
+	input.search_input:-ms-input-placeholder      
+		color #aa7bff
+		font-size 20px
+
+// form date inputs
+.search_form-date
 	padding-left 40px
 	margin-bottom 45px
 	
-	.date_wrap
-		margin-right 20px
-		&:nth-child(2)
-			margin-right 30px
-		&:last-child
-			margin-right 0
-	
-.search_date
+.search_input-date
 	display block
 	width 100%
+	height 37px
 	background transparent
 	font-size 50px
-	color #aa7bff
+	color #fff
 	transition all .25s ease-in-out
 	border none
 	box-shadow none
 	outline none
 	&:focus
 		color #aa7bff
-input.search_date::-webkit-input-placeholder 
-	color #fff
-	font-size 50px
-input.search_date::-moz-placeholder          
-	color #fff
-	font-size 50px
-input.search_date:-moz-placeholder           
-	color #fff
-	font-size 50px
-input.search_date:-ms-input-placeholder      
-	color #fff
-	font-size 50px
+	input.search_input-date::-webkit-input-placeholder 
+		color #aa7bff
+		font-size 50px
+	input.search_input-date::-moz-placeholder          
+		color #aa7bff
+		font-size 50px
+	input.search_input-date:-moz-placeholder           
+		color #aa7bff
+		font-size 50px
+	input.search_input-date:-ms-input-placeholder      
+		color #aa7bff
+		font-size 50px
 	
-.search_date-label
-	display block
+.search_form-label
+	display inline-block
 	width 28px
 	height 28px
 	cursor pointer
 	
-.date_label
-	background url(../img/icons-sprite.png) no-repeat 0 0
-.time_label
-	background url(../img/icons-sprite.png) no-repeat -32px 0
-.people_label
-	background url(../img/icons-sprite.png) no-repeat -63px 0
+	&.date_label
+		background url(../img/icons-sprite.png) no-repeat 0 0
+	&.time_label
+		background url(../img/icons-sprite.png) no-repeat -32px 0
+	&.people_label
+		background url(../img/icons-sprite.png) no-repeat -63px 0
 
+// search_submit
 .search_submit
-	padding 20px 125px
+	padding 20px 0
 	display block
 	width 100%
 	background transparent
@@ -250,21 +252,10 @@ input.search_date:-ms-input-placeholder
 	text-align center
 	&:hover
 		border-color $blue-color
-		background-color $blue-color
-	
-// Search From
-.search_to
-	float left
-.search_from
-	float right
-	position relative
-	overflow hidden
-	.close_search
-		top 35px
-		z-index 1
-		cursor pointer
-	
-.show_search
+		background-color $blue-color	
+		
+// overlay form
+.overlay_form
 	position absolute
 	padding 38px
 	height 100%
@@ -276,10 +267,14 @@ input.search_date:-ms-input-placeholder
 	text-align center
 	vertical-align middle
 	z-index 2
-	.show_title
+	.overlay_title
 		color #fff
 		text-align left
-	.show_plus
+		margin 0
+		text-transform uppercase
+		font-size 20px
+	font-family "FuturaHeavy", Arial, sans-serif
+	.overlay_plus
 		position absolute
 		top 50%
 		left 50%
@@ -291,15 +286,12 @@ input.search_date:-ms-input-placeholder
 		background url(../img/plus.png) no-repeat
 		color #fff
 		cursor pointer
-.date_wrap
-	&:nth-child(2)
-		input
-			padding-right 10px
-.date_wrap
-	&:first-child
-		label
-			margin-left 10px
 		
+.hide_form
+	z-index 1
+	top 33px
+
+
 @import '_footer.styl'
 
 @import '_media.styl'

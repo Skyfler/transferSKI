@@ -63,24 +63,10 @@
 		width 270px
 		margin-left -135px
 		
-	// search
-	.search_date
-		font-size 30px
-	
-	.search_date-wrap 
-		.date_wrap
-			&:nth-child(2)
-				margin-right 10px
-		
-	input.search_date::-webkit-input-placeholder 
-		font-size 30px
-	input.search_date::-moz-placeholder          
-		font-size 30px
-	input.search_date:-moz-placeholder           
-		font-size 30px
-	input.search_date:-ms-input-placeholder      
-		font-size 30px
-		
+	// search 2
+	.search_form-date
+		padding-left 10px
+			
 	// journey
 	.journey_wrapper
 		text-align right
@@ -130,75 +116,6 @@
 	// mobile menu
 	.menu_close
 		right 0
-		
-	// search form
-	.search_form-wrap
-		left 50%
-		transform translate(-50%, -100%)
-
-	.search
-		width 100%
-		padding 20px
-	.search_to,
-	.search_from
-		float none
-		
-	.search_to
-		.search_submit-wrap
-			display none
-		.search_date-wrap
-			margin-bottom 40px
-			
-	.search_date
-		font-size 20px
-	.search_direction-wrap
-		padding-left 25px
-	
-		.search_arrow
-			background url(../img/search-arrow-mobile.png) no-repeat
-			height 52px
-			width 14px
-			
-		.search_direction
-			margin-bottom 20px
-			font-size 16px
-			padding-bottom 0
-	input.search_direction::-webkit-input-placeholder 
-		font-size 16px
-	input.search_direction::-moz-placeholder          
-		font-size 16px
-	input.search_direction:-moz-placeholder           
-		font-size 16px
-	input.search_direction:-ms-input-placeholder      
-		font-size 16px
-	
-	input.search_date::-webkit-input-placeholder 
-		font-size 20px
-	input.search_date::-moz-placeholder          
-		font-size 20px
-	input.search_date:-moz-placeholder           
-		font-size 20px
-	input.search_date:-ms-input-placeholder      
-		font-size 20px
-			
-	.search_title
-		font-size 14px
-		margin-bottom 20px
-		
-	.search_from
-		padding-top 0
-		.close_search 
-			top 0
-	
-	.show_search
-		right -100%
-		padding 20px
-		
-	.date_wrap
-		&:first-child
-			label
-				margin-left 0
-	
 	// journey
 	.journey_wrapper
 		padding-bottom 210px
@@ -243,9 +160,47 @@
 		padding 0 20px 0 220px
 	.alps_text
 		padding 0 220px 0 20px
+
++max-screen(720px)
+	.search_form
+		padding 20px
+	.overlay_form
+		padding 20px
 		
 		
 +max-screen(630px)
+
+	// search 2
+	.search_wrapper
+		// left 50%
+		// transform translate(-50%, -100%)
+	.search_form-to,
+	.search_form-from
+		float none
+		width 100%
+	.search_form-from
+		padding-top 0
+	.hidden_submit
+		display none
+		
+	.search_form-direction,
+	.search_form-date
+		margin-bottom 30px
+	
+	.search_form-direction
+		padding-left 30px
+		.search_input
+			margin-bottom 20px
+			padding-bottom 0
+		.search_form-arrow
+			background url(../img/search-arrow-mobile.png) no-repeat
+			top 12px
+			height 52px
+			width 14px
+	.overlay_form
+		right -100%
+	.hide_form
+		top 0
 	// journey
 	.journey_wrapper
 		padding-bottom 180px	
@@ -283,17 +238,26 @@
 			a
 				font-size 16px
 			
-	// search
-	.search_form
-		width: 100%
-		max-width 280px
-	.search_date-wrap 
-		.date_wrap
-			&:nth-child(2)
-				margin-right 0
+	// search 2
+	input.search_input::-webkit-input-placeholder 
+		font-size 16px
+	input.search_input::-moz-placeholder          
+		font-size 16px
+	input.search_input:-moz-placeholder           
+		font-size 16px
+	input.search_input:-ms-input-placeholder      
+		font-size 16px
 	
-	.search_submit
-		padding 20px
+	input.search_input::-webkit-input-placeholder 
+		font-size 20px !important
+	input.search_input::-moz-placeholder          
+		font-size 20px !important
+	input.search_input:-moz-placeholder           
+		font-size 20px !important
+	input.search_input:-ms-input-placeholder      
+		font-size 20px !important
+
+	
 	// journey
 	.journey_wrapper
 		padding-bottom 240px
