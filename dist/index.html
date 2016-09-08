@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="css/libs/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/libs/bootstrap.css">
 	<link rel="stylesheet" href="css/select.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+
 	<!-- Main file with styles -->
 	<link rel="stylesheet" href="css/style.min.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,85 +25,90 @@
 </head>
 
 <body>
-	
+
 	<!-- CONTENT WRAPPER -->
 	<div class="content_wrapper">
-
+		
+		<!-- top line -->
 		<div class="top_line">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-6">
-						<!-- Choice the language -->
-						<div class="top_line-lang">
-							<a href="#" class="mobile_logo">T<span>-S</span></a>
 
-							<div class="dropdowns_wrapper">
-								<!-- Dropdown language-->
-								<div id="dd1" class="dropdown_wrap" tabindex="1">
-									<a href="#" class="first_item">RU</a>
-									<ul class="dropdown">
-										<li><a href="#">ENG</a>
-									</ul>
-								</div>
-								<!-- Dropdown language 2-->
-								<div id="dd2" class="dropdown_wrap" tabindex="1">
-									<a href="#" class="first_item">USD</a>
-									<ul class="dropdown">
-										<li><a href="#">RUR</a>
-										<li><a href="#">EUR</a>
-										<li><a href="#">GBR</a>
-									</ul>
-								</div>
+			<div class="row">
+				<!-- Choice the language -->
+				<div class="col-md-4 col-sm-4 col-xs-6">
+					
+					<div class="top_line-lang">
+						<a href="#" class="mobile_logo">T<span>-S</span></a>
+						
+						<!-- Dropdown language-->
+						<div class="dropdowns_wrapper">
+							<div id="dd1" class="dropdown_wrap" tabindex="1">
+								<a href="#" class="first_item">RU</a>
+								<ul class="dropdown">
+									<li><a href="#">ENG</a></li>
+								</ul>
+							</div>
+							<!-- Dropdown language 2-->
+							<div id="dd2" class="dropdown_wrap" tabindex="1">
+								<a href="#" class="first_item">USD</a>
+								<ul class="dropdown">
+									<li><a href="#">RUR</a></li>
+									<li><a href="#">EUR</a></li>
+									<li><a href="#">GBR</a></li>
+								</ul>
 							</div>
 						</div>
-					<!-- //Choice the language -->
-					</div>
-
-					<div class="col-md-4 col-sm-4">
-						
-					<!-- Logo header -->
-						<a href="#" id="transfer_logo" class="top_line-logo">
-							<p class="logo_transfer">
-								transfer
-								<span class="logo_ski">-ski</span>
-							</p>
-						</a>
-					<!-- //Logo header -->
-					</div>
-
-					<div class="col-md-4 col-sm-4 text-right">
-						<!-- Contacts header -->
-						<ul class="top_line-contacts">
-							<li class="top_line-contacts--item hidden_phone"><a href="#" class="top_line-phone">+33 966 896 434</a></li>
-							<li class="top_line-contacts--item"><a href="#" class="top_line-contact-us">Contact us</a></li>
-						</ul>
-						<!-- //Contacts header -->
-						
-						<!-- Mobile menu button -->
-						<a href="#" id="mobile_menu-show" data-action="show" class="menu_show">&nbsp;</a>
-						<!-- // Mobile menu button -->
 					</div>
 				</div>
+				<!-- //Choice the language -->
+
+				<!-- Logo header -->
+				<div class="col-md-4 col-sm-4 hidden-xs">
+					<a href="#" id="transfer_logo" class="top_line-logo">
+						<p class="logo_transfer">transfer<span class="logo_ski">-ski</span></p>
+					</a>
+									
+				</div>
+				<!-- //Logo header -->
+
+				<!-- Contacts header -->
+				<div class="col-md-4 col-sm-4 col-xs-6 text-right">
+					<ul class="top_line-contacts">
+						<li class="top_line-contacts--item hidden_phone">
+							<a href="#" class="top_line-phone">+33 966 896 434</a>
+						</li>
+						<li class="top_line-contacts--item">
+							<a href="#" class="top_line-contact-us">Contact us</a>
+						</li>
+					</ul>
+					<!-- Mobile menu button -->
+					<span id="mobile_menu-show" data-action="show" class="menu_show">&nbsp;</span>
+					<!-- // Mobile menu button -->
+				</div>
+				<!-- //Contacts header -->
 			</div>
+			<!-- //row -->
 		</div>
-		
+		<!-- // top line -->
+
 		<!-- Mobile menu -->
 		<div class="mobile_menu popup popup--menu js-popup-menu" id="mobile_menu">
 
 			<h2 class="mobile_title">Menu</h2>
 
-			<a href="#" id="mobile_menu-close" class="menu_close" data-action="close">x</a>
+			<span id="mobile_menu-close" class="menu_close" data-action="close">x</span>
 
 			<ul class="mobile_menu-list">
 				<li class="mobile_menu-item"><a href="#">About us</a></li>
-				<li class="mobile_menu-item"><a href="#">Contacts <span class="mobile_phone">+33 966 896 434</span></a></li>
+				<li class="mobile_menu-item"><a href="#">Contacts<span class="mobile_phone">+33 966 896 434</span></a></li>
 				<li class="mobile_menu-item"><a href="#">Terms & Conditions</a></li>
 				<li class="mobile_menu-item"><a href="#">FAQ</a></li>
 			</ul>
+
 			<ul class="mobile_language-list">
 				<li class="mobile_lang-item"><a href="#" class="active">RU</a></li>
 				<li class="mobile_lang-item"><a href="#">ENG</a></li>
 			</ul>
+
 			<ul class="mobile_language-list">
 				<li class="mobile_lang-item"><a href="#" class="active">USD</a></li>
 				<li class="mobile_lang-item"><a href="#">EUR</a></li>
@@ -112,22 +119,117 @@
 
 		<!-- Header parallax -->
 		<header class="header">
-<!-- 			<div class="header_text" data-type='parallax' data-depth="0.2"></div>
+			<div class="header_text" data-type='parallax' data-depth="0.2"></div>
 			<div class="header_rock" data-type='parallax' data-depth="0"></div>
 			<div class="header_cloud" data-type='parallax' data-depth="0.3"></div>
-			<div class="header_ski" data-type='parallax' data-depth="0.4"></div> -->
+			<div class="header_ski" data-type='parallax' data-depth="0.4"></div>
 			<div class="header_mobile"></div>
+			
+			<!-- Search form wrapper -->
+			<div class="search_form-wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 text-center no-padding">
+							<!-- FORM -->
+							<form class="search_form clearfix">
+								<!-- Search TO -->
+								<div class="search search_to">
+									<h3 class="search_title">To</h3>
+									<div class="search_direction-wrap">
+										<span class="search_arrow" id="searchArrowTo"></span>
+										<input id="inputFromTo" type="text" placeholder="Where are you from?" class="search_direction">
+										<input id="inputArriveTo" type="text" placeholder="Where are you arrive?" class="search_direction">
+									</div>
+
+									<div class="search_date-wrap">
+										<div class="row">
+
+											<div class="col-sm-3 col-xs-3 no-padding text-left date_wrap">
+												<label for="date_arrive_to" class="search_date-label date_label"></label>
+												<input type="text" id="date_arrive_to" name="date_arrive" class="search_date" placeholder="15S">
+											</div>
+
+											<div class="col-sm-5 col-xs-5 no-padding text-left date_wrap">
+												<label for="date_time" class="search_date-label time_label"></label>
+												<input type="text" id="date_time" name="date_time" class="search_date" placeholder="00:00">
+											</div>
+
+											<div class="col-sm-2 col-xs-2 no-padding text-left date_wrap">
+												<label for="date_people" class="search_date-label people_label"></label>
+												<input type="text" id="date_people" name="date_people" class="search_date" placeholder="1">
+											</div>
+										</div>
+										<!-- //row -->
+									</div>
+									
+									<div class="search_submit-wrap">
+										<input type="submit" class="search_submit" value="Search transfer">
+									</div>
+								</div>
+								<!-- // Search TO -->
+
+								<!-- Search FROM -->
+								<div class="search search_from">
+									<h3 class="search_title">From</h3>
+									<span class="close_search menu_close" id="closeForm" data-show="close">X</span>
+
+									<!-- overlay -->
+									<div class="show_search" id="overlayForm">
+										<h3 class="search_title show_title">From</h3>
+										<span class="show_plus" id="showForm" data-show="show"></span>
+									</div>
+									<!-- //overlay -->
+
+									<div class="search_direction-wrap">
+										<span class="search_arrow" id="searchArrowFrom"></span>
+										<input id="inputFromFrom" type="text" placeholder="Where are you from?" class="search_direction">
+										<input id="inputArriveFrom" type="text" placeholder="Where are you arrive?" class="search_direction">
+									</div>
+
+									<div class="search_date-wrap">
+										<div class="row">
+											<div class="col-sm-3 col-xs-3 no-padding text-left date_wrap">
+												<label for="date_arrive_from" class="search_date-label date_label"></label>
+												<input type="text" id="date_arrive_from" name="date_arrive" class="search_date" placeholder="15S">
+											</div>
+
+											<div class="col-sm-5 col-xs-5 no-padding text-left date_wrap">
+												<label for="date_time_from" class="search_date-label time_label"></label>
+												<input type="text" id="date_time_from" name="date_time" class="search_date" placeholder="00:00">
+											</div>
+
+											<div class="col-sm-2 col-xs-2 no-padding text-left date_wrap">
+												<label for="date_people_from" class="search_date-label people_label"></label>
+												<input type="text" id="date_people_from" name="date_people" class="search_date" placeholder="1">
+											</div>
+										</div>
+										<!-- //row -->
+									</div>
+
+									<div class="search_submit-wrap">
+										<input type="submit" class="search_submit" value="Search transfer">
+									</div>
+								</div>
+								<!-- // Search from-->
+							</form>
+							<!-- // FORM -->
+						</div>
+						<!-- // col -->
+					</div>
+					<!-- // row -->
+				</div>
+				<!-- // container -->
+			</div>
+			<!-- //Search form wrapper -->
 		</header>
-		<!-- //Header parallax -->
-
-
+		<!-- //Header parallax-->
 
 		<!-- Journey section -->
 		<div class="journey_wrapper">
 			<section class="journey_title-wrap container text-center">
 				<h2 class="journey_title">journey</h2>
 			</section>
-		
+
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-5 col-sm-8 col-sm-offset-4 col-xs-12 no-padding">
@@ -137,8 +239,11 @@
 							</p>
 						</div>
 					</div>
+					<!-- // col -->
 				</div>
+				<!-- // row -->
 			</div>
+			<!-- // container -->
 		</div>
 		<!-- // Journey -->
 
@@ -151,13 +256,14 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-1 col-sm-8 col-sm-offset-1 col-xs-12 no-padding text-left">
 						<div class="alps_text">
-							<p class="alps_descr">
-							Now we are making transfers only in Europe, but soon take over the world. We offers a private pick up serice at the airport, to transfer you to the destination of your choice quickly and on time. Our guarantee to you is a safe, affordable and reliable service backed by  professional, reliable and committed team.
-							</p>
+							<p class="alps_descr">Now we are making transfers only in Europe, but soon take over the world. We offers a private pick up serice at the airport, to transfer you to the destination of your choice quickly and on time. Our guarantee to you is a safe, affordable and reliable service backed by  professional, reliable and committed team.</p>
 						</div>
 					</div>
+					<!-- // col -->
 				</div>
+				<!-- // row -->
 			</div>
+			<!-- // container -->
 		</div>
 		<!-- //The Alps section -->
 
@@ -165,7 +271,9 @@
 		<section class="countries_wrapper">
 			<div class="container">
 				<div class="row">
+					<!-- Country wrapper -->
 					<div class="col-md-9 col-md-offset-2 col-sm-10 col-sm-offset-2 col-sm-12 no-padding country">
+						<!-- Country wrapper -->
 						<div class="country_wrap clearfix">
 							<div class="country_img-wrap">
 								<img class="country_img" src="img/switz.jpg" alt="Switzerland">
@@ -177,6 +285,9 @@
 							</div>
 						</div>
 					</div>
+					<!-- //Country wrapper -->
+
+					<!-- Country wrapper -->
 					<div class="col-md-9 col-md-offset-2 col-sm-10 col-sm-offset-2 col-sm-12 no-padding country">
 						<div class="country_wrap clearfix">
 							<div class="country_img-wrap">
@@ -189,6 +300,9 @@
 							</div>
 						</div>
 					</div>
+					<!-- //Country wrapper -->
+					
+					<!-- //Country wrapper -->	
 					<div class="col-md-9 col-md-offset-2 col-sm-10 col-sm-offset-2 col-sm-12 no-padding country">
 						<div class="country_wrap clearfix">
 							<div class="country_img-wrap">
@@ -201,8 +315,12 @@
 							</div>
 						</div>
 					</div>
+					<!-- //Country wrapper -->
+
 				</div>
+				<!-- // row -->
 			</div>
+			<!-- // container -->
 		</section>
 		<!-- //Countries section -->
 
@@ -210,12 +328,15 @@
 		<footer class="footer">
 			<div class="container-fluid">
 				<div class="row">
+					<!-- Footer copyright -->
 					<div class="col-md-3 col-sm-3 col-xs-6 no-padding text-left">
 						<div class="footer_copy">
-							<p class="transfer_copy">Transfer-ski, <span class="copy_year">2016</span></p>
+							<p class="transfer_copy">Transfer-ski,<span class="copy_year">2016</span></p>
 						</div>
 					</div>
+					<!-- //Footer copyright -->
 					
+					<!-- Footer menu -->
 					<div class="col-md-9 col-sm-9 col-xs-6 text-right">
 						<nav class="footer_nav">
 							<ul class="footer_menu">
@@ -228,27 +349,29 @@
 						</nav>
 						<a href="#" class="mobile_footer-phone">+33 966 896 434</a>
 					</div>
+					<!-- //Footer menu -->
 				</div>
+				<!-- // row -->
 			</div>
-			
+			<!-- // container -->
 		</footer>
 		<!-- //Footer -->
+
 	</div>
+
 	<!-- //CONTENT WRAPPER -->
 
-
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins)  IF NEEDED-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/libs/bootstrap.js"></script>
 	<script src="js/select.js"></script>
 	<!-- All libs scripts -->
 	<!-- <script src="js/libs.min.js"></script>
 -->
-
 	<!-- Main file with scripts -->
 	<script src="js/common.js"></script>
 
-<script>
+	<script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
 </body>

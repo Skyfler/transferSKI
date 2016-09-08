@@ -16,6 +16,8 @@
 	// countries
 	.country_descr
 		margin-left 320px
+		.country_direction
+			font-size 25px
 
 +max-screen(1100px)
 	// journey
@@ -61,6 +63,24 @@
 		width 270px
 		margin-left -135px
 		
+	// search
+	.search_date
+		font-size 30px
+	
+	.search_date-wrap 
+		.date_wrap
+			&:nth-child(2)
+				margin-right 10px
+		
+	input.search_date::-webkit-input-placeholder 
+		font-size 30px
+	input.search_date::-moz-placeholder          
+		font-size 30px
+	input.search_date:-moz-placeholder           
+		font-size 30px
+	input.search_date:-ms-input-placeholder      
+		font-size 30px
+		
 	// journey
 	.journey_wrapper
 		text-align right
@@ -97,7 +117,7 @@
 			&:last-child
 				margin-right 0
 		
-+max-screen(769px)
++max-screen(770px)
 	// header
 	.header_text,
 	.header_rock,
@@ -111,6 +131,74 @@
 	.menu_close
 		right 0
 		
+	// search form
+	.search_form-wrap
+		left 50%
+		transform translate(-50%, -100%)
+
+	.search
+		width 100%
+		padding 20px
+	.search_to,
+	.search_from
+		float none
+		
+	.search_to
+		.search_submit-wrap
+			display none
+		.search_date-wrap
+			margin-bottom 40px
+			
+	.search_date
+		font-size 20px
+	.search_direction-wrap
+		padding-left 25px
+	
+		.search_arrow
+			background url(../img/search-arrow-mobile.png) no-repeat
+			height 52px
+			width 14px
+			
+		.search_direction
+			margin-bottom 20px
+			font-size 16px
+			padding-bottom 0
+	input.search_direction::-webkit-input-placeholder 
+		font-size 16px
+	input.search_direction::-moz-placeholder          
+		font-size 16px
+	input.search_direction:-moz-placeholder           
+		font-size 16px
+	input.search_direction:-ms-input-placeholder      
+		font-size 16px
+	
+	input.search_date::-webkit-input-placeholder 
+		font-size 20px
+	input.search_date::-moz-placeholder          
+		font-size 20px
+	input.search_date:-moz-placeholder           
+		font-size 20px
+	input.search_date:-ms-input-placeholder      
+		font-size 20px
+			
+	.search_title
+		font-size 14px
+		margin-bottom 20px
+		
+	.search_from
+		padding-top 0
+		.close_search 
+			top 0
+	
+	.show_search
+		right -100%
+		padding 20px
+		
+	.date_wrap
+		&:first-child
+			label
+				margin-left 0
+	
 	// journey
 	.journey_wrapper
 		padding-bottom 210px
@@ -141,6 +229,7 @@
 	
 	.country_descr
 		margin-left 0
+		padding-left 170px
 	// footer
 	.footer
 		padding 40px 20px
@@ -178,6 +267,7 @@
 			width 100%
 	
 	.country_descr
+		padding-left 0 !important
 		.country_direction
 			font-size 25px
 	
@@ -192,7 +282,18 @@
 		.mobile_lang-item
 			a
 				font-size 16px
-				
+			
+	// search
+	.search_form
+		width: 100%
+		max-width 280px
+	.search_date-wrap 
+		.date_wrap
+			&:nth-child(2)
+				margin-right 0
+	
+	.search_submit
+		padding 20px
 	// journey
 	.journey_wrapper
 		padding-bottom 240px
