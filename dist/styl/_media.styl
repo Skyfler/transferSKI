@@ -115,6 +115,8 @@
 		
 +max-screen(770px)
 	// header
+	header
+		display none
 	.header_text,
 	.header_rock,
 	.header_cloud,
@@ -137,6 +139,12 @@
 	.alps_title:after, 
 	.journey_title:after
 		font-size 20px
+	// search
+	.search_wrapper
+		background #fff url(../img/header-bg.png) no-repeat center bottom
+		padding-top 80px
+		background-size cover
+		height 100vh
 		
 	// countries
 	.country
@@ -181,9 +189,9 @@
 +max-screen(630px)
 
 	// search 2
-	.search_wrapper
-		// left 50%
-		// transform translate(-50%, -100%)
+	// .search_wrapper
+	// 	// left 50%
+	// 	// transform translate(-50%, -100%)
 	.search_form-to,
 	.search_form-from
 		float none
@@ -249,6 +257,10 @@
 				font-size 16px
 			
 	// search 2
+	.search_form-title,
+	.overlay_title
+		font-family "FuturaBook", Arial, sans-serif
+		font-size 14px
 	input.search_input::-webkit-input-placeholder 
 		font-size 16px
 	input.search_input::-moz-placeholder          
