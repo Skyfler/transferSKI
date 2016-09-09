@@ -15,7 +15,7 @@ var transferApp = function () {
 				}   
 		};
 
-		// Close and Show mobile menu handler
+		// Close/Show mobile menu handler
 		var closeBtn = doc.getElementById('mobile_menu-close'),
 				showBtn = doc.getElementById('mobile_menu-show');
 
@@ -25,8 +25,7 @@ var transferApp = function () {
 				if(target.getAttribute('data-action') === 'show') {
 						menu.style.right = "0";
 				}
-		}
-
+		};
 
 		var closeMenu = function(e) {
 				var target = e && e.target|| e.srcElement,
@@ -36,11 +35,11 @@ var transferApp = function () {
 				}
 		};
 
-		// Show/close search form handler
+		// Hide/show search form handler
 		var showFormBtn = doc.getElementById('showForm'),
-				closeFormBtn = doc.getElementById('closeForm');
+				hideFormBtn = doc.getElementById('hideForm');
 
-		var closeForm = function(e) {
+		var hideShowForm = function(e) {
 			var target =  e && e.target || e.srcElement,
 				 	searchForm = doc.getElementById('overlayForm');
 
@@ -51,14 +50,14 @@ var transferApp = function () {
 			}
 		};
 
-		// arrow change input
-		var arrowTo = doc.getElementById('searchArrowTo'),
-				arrowFrom = doc.getElementById('searchArrowFrom'),
+		// Change input value handler
+		var arrowTo = doc.getElementById('changeInputsValTo'),
+				arrowFrom = doc.getElementById('changeInputsValFrom'),
 				inputFromTo = doc.getElementById('inputFromTo'),
 				inputArriveTo = doc.getElementById('inputArriveTo'),
 				inputFromFrom = doc.getElementById('inputFromFrom'),
 				inputArriveFrom = doc.getElementById('inputArriveFrom');
-
+		
 		var changeInputs = function(e) {
 				var target = e && e.target || e.srcElement,
 						valFromTo =  inputFromTo.value,
@@ -66,12 +65,12 @@ var transferApp = function () {
 						valFromFrom = inputFromFrom.value,
 						valArriveFrom = inputArriveFrom.value;
 
-				if(target.id === 'searchArrowTo') {
+				if(target.id === 'changeInputsValTo') {
 						inputFromTo.value = null;
 						inputArriveTo.value = null;
 						inputFromTo.value = valArriveTo;
 						inputArriveTo.value = valFromTo;
-				} else if (target.id === 'searchArrowFrom') {
+				} else if (target.id === 'changeInputsValFrom') {
 						inputFromFrom.value = null;
 						inputArriveFrom.value = null;
 						inputFromFrom.value = valArriveFrom;
@@ -79,50 +78,53 @@ var transferApp = function () {
 				}
 		};
 
-		// Change arrow handler
-		var changeArrowActive = function(e) {
-			var target = e && e.target || e.srcElement;
-			if (target.id === 'inputFromTo' || target.id === 'inputArriveTo') {
-				arrowTo.classList.add('arrow_active');
-
-			} else if (target.id === 'inputFromFrom' || target.id === 'inputArriveFrom'){
-				arrowFrom.classList.add('arrow_active');
-			}
-		};
-
+		// Change arrow bg event
 		var changeArrowBlur = function(e) {
 			var target = e && e.target || e.srcElement;
 			if (target.id === 'inputFromTo' || target.id === 'inputArriveTo') {
-				arrowTo.classList.remove('arrow_active');
+				arrowTo.classList.remove('search_form-arrow--active');
 
 			} else if (target.id === 'inputFromFrom' || target.id === 'inputArriveFrom'){
-				arrowFrom.classList.remove('arrow_active');
+				arrowFrom.classList.remove('search_form-arrow--active');
 			}
 		};
 
-		// Change Arrow event
-		inputFromTo.addEventListener('focus', changeArrowActive);
-		inputFromFrom.addEventListener('focus', changeArrowActive);
-		inputFromTo.addEventListener('blur', changeArrowBlur);
-		inputFromFrom.addEventListener('blur', changeArrowBlur);
+		var changeArrowActive = function(e) {
+			var target = e && e.target || e.srcElement;
+			if (target.id === 'inputFromTo' || target.id === 'inputArriveTo') {
+				arrowTo.classList.add('search_form-arrow--active');
 
-		// Show Search form event
-		closeFormBtn.addEventListener('click', closeForm);
-		showFormBtn.addEventListener('click', closeForm);
+			} else if (target.id === 'inputFromFrom' || target.id === 'inputArriveFrom'){
+				arrowFrom.classList.add('search_form-arrow--active');
+			}
+		};
 
-		// Change value of inputs event
-		arrowTo.addEventListener('click', changeInputs);
-		arrowFrom.addEventListener('click', changeInputs);
+		// Show logo event
+		window.addEventListener('scroll', showLogo); 
 
 		// Mobile menu event
 		closeBtn.addEventListener('click', closeMenu);
 		showBtn.addEventListener('click', showMenu);
 
-		// Parallax event
-		// window.addEventListener('scroll', parallax;
+		// Hide/show form event
+		hideFormBtn.addEventListener('click', hideShowForm);
+		showFormBtn.addEventListener('click', hideShowForm);
 
-		// Show logo event
-		window.addEventListener('scroll', showLogo); 
+		// Change value inputs event
+		arrowTo.addEventListener('click', changeInputs);
+		arrowFrom.addEventListener('click', changeInputs);
+
+		// Change arrow bg on focus input
+		inputFromTo.addEventListener('focus', changeArrowActive);
+		inputFromFrom.addEventListener('focus', changeArrowActive);
+		inputFromTo.addEventListener('blur', changeArrowBlur);
+		inputFromFrom.addEventListener('blur', changeArrowBlur);
+
+		
+
+		// Parallax event
+		// window.addEventListener('scroll', parallax);
+
 
 };
 
