@@ -36,7 +36,18 @@
 	position relative
 	padding-left 40px
 	margin-bottom 45px
-	.search_form-arrow,
+	.search_form-arrow
+		cursor pointer
+		display block
+		position absolute
+		top 5px
+		left 0
+		width 22px
+		height 98px
+		background url(../img/arrow-sprite.png) no-repeat
+		background-position 0 -98px
+		transition all .25s ease-in-out
+
 	.search_form-arrow--active
 		cursor pointer
 		display block
@@ -46,12 +57,8 @@
 		width 22px
 		height 98px
 		background url(../img/arrow-sprite.png) no-repeat
-		
+		background-position 0 0
 		transition all .25s ease-in-out
-	.search_form-arrow
-		background-position 0 -98px
-	.search_form-arrow--active
-		background-position 0 0 !important
 	
 	.search_input
 		width 100%
