@@ -4,15 +4,15 @@ var transferApp = function () {
 
 		// Show Logo handler
 		var showLogo = function(e) {
-				var logo = doc.getElementById('transfer_logo'),
-						topDistance = window.pageYOffset;
+			var logo = doc.getElementById('transfer_logo'),
+				topDistance = window.pageYOffset;
 
-				if(topDistance >= 400) {
-						logo.style.cssText = "opacity: 1;";
+			if(topDistance >= 400) {
+				logo.style.cssText = "opacity: 1;";
 
-				} else {
-						logo.style.cssText = "opacity: 0;";
-				}   
+			} else {
+				logo.style.cssText = "opacity: 0;";
+			}   
 		};
 
 		// Close/Show mobile menu handler

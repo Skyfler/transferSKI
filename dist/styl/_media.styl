@@ -41,7 +41,8 @@
 +max-screen(992px)
 	// Header
 	.top_line
-		padding 18px 20px
+		padding 20px
+		padding-bottom 0
 		
 	.mobile_menu-list 
 		.mobile_menu-item 
@@ -142,9 +143,12 @@
 	// search
 	.search_wrapper
 		background #fff url(../img/header-bg.png) no-repeat center bottom
-		padding-top 80px
+		padding-top 310px
 		background-size cover
 		height 100vh
+		position relative
+	.form_mobile
+		position relative
 		
 	// countries
 	.country
@@ -192,6 +196,11 @@
 	// .search_wrapper
 	// 	// left 50%
 	// 	// transform translate(-50%, -100%)
+	.search_wrapper
+		padding-top 0
+	.form_mobile
+		position absolute !important
+		bottom 0 !important
 	.search_form-to,
 	.search_form-from
 		float none
@@ -257,10 +266,19 @@
 				font-size 16px
 			
 	// search 2
+	.search_form-to
+		padding-bottom 1px
 	.search_form-title,
 	.overlay_title
 		font-family "FuturaBook", Arial, sans-serif
 		font-size 14px
+	.search_form-title
+		margin-bottom 15px
+		
+	.search_form-direction
+		.search_input
+			font-size 14px
+			margin-bottom 13px
 	input.search_input::-webkit-input-placeholder 
 		font-size 16px
 	input.search_input::-moz-placeholder          
@@ -269,17 +287,22 @@
 		font-size 16px
 	input.search_input:-ms-input-placeholder      
 		font-size 16px
-	
-	input.search_input::-webkit-input-placeholder 
+		
+	.search_input-date
+		font-size 20px
+		height 20px
+	input.search_input-date::-webkit-input-placeholder 
 		font-size 20px !important
-	input.search_input::-moz-placeholder          
+	input.search_input-date::moz-input-placeholder 
 		font-size 20px !important
-	input.search_input:-moz-placeholder           
+	input.search_input-date:-moz-input-placeholder 
 		font-size 20px !important
-	input.search_input:-ms-input-placeholder      
+	input.search_input-date:-ms-input-placeholder 
 		font-size 20px !important
 
-	
+	.search_submit
+		padding 14px 0
+
 	// journey
 	.journey_wrapper
 		padding-bottom 240px
@@ -336,5 +359,7 @@
 	// country
 	.countries_wrapper
 		padding-top 190px
+		
+
 	
 
