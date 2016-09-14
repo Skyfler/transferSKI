@@ -11,7 +11,7 @@
 	
 
 	<link rel="stylesheet" href="css/select.css">
-	
+
 
 	<!-- Main file with styles -->
 	<link rel="stylesheet" href="css/style.min.css">
@@ -118,106 +118,107 @@
 
 		<!-- Header parallax -->
 		<header class="header">
-			<div class="header_text" data-type='parallax' data-depth="0.2"></div>
-			<div class="header_rock" data-type='parallax' data-depth="0"></div>
-			<div class="header_cloud" data-type='parallax' data-depth="0.3"></div>
-			<div class="header_ski" data-type='parallax' data-depth="0.4"></div>
+			<div class="header_text layer" data-type='parallax' data-depth="0.6"></div>
+			<div class="header_rock"></div>
+			<div class="header_cloud layer" data-type='parallax' data-depth="0.1"></div>
+			<div class="header_ski layer" data-type='parallax' data-depth="0.7"></div>
 			<div class="header_mobile"></div>
+			<!-- Search form -->
+			<div class="search_wrapper layer" data-type='parallax_form' data-depthh="2" id="forma">
+			<!-- form mobile -->
+				<div class="form_mobile">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+								<!-- form -->
+								<form class="clearfix">
+									<!-- TO -->
+									<div class="search_form-to search_form text-left">
+										<h3 class="search_form-title">To</h3>
+										<!-- direction -->
+										<div class="search_form-direction">
+											<span class="search_form-arrow" id="changeInputsValTo"></span>
+											<input type="text" class="search_input" placeholder="Where are you from?" id="inputFromTo">
+											<input type="text" class="search_input" placeholder="Where are you arrive?" id="inputArriveTo">
+										</div>
+										<!-- //direction -->
+										<!-- date -->
+										<div class="search_form-date">
+											<div class="row">
+												<div class="col-xs-3 text-left">
+													<label for="date_to" class="search_form-label date_label"></label>
+													<input type="text" id="date_to" class="search_input-date" placeholder="15">
+												</div>
+												<div class="col-xs-6 text-left">
+													<label for="time_to" class="search_form-label time_label"></label>
+													<input type="text" id="time_to" class="search_input-date" placeholder="00:00">
+												</div>
+												<div class="col-xs-3 text-left">
+													<label for="people_to" class="search_form-label people_label"></label>
+													<input type="number" id="people_to" class="search_input-date" placeholder="1">
+												</div>
+											</div>
+											<!-- //row -->
+										</div>
+										<!-- //date -->
+										<input type="submit" class="search_submit hidden_submit" value="Search transfer">
+									</div>
+									<!-- // TO -->
+									<!-- FROM -->
+									<div class="search_form-from search_form text-left">
+										<h3 class="search_form-title">From</h3>
+										<span class="hide_form menu_close" id="hideForm" data-show="close"></span>
+										<!-- overlay -->
+										<div class="overlay_form" id="overlayForm">
+											<h3 class="search_title overlay_title">From</h3>
+											<span class="overlay_plus" id="showForm" data-show="show"></span>
+										</div>
+										<!-- //overlay -->
+										<!-- direction -->
+										<div class="search_form-direction">
+											<span class="search_form-arrow" id="changeInputsValFrom"></span>
+											<input type="text" class="search_input" placeholder="Where are you from?" id="inputFromFrom">
+											<input type="text" class="search_input" placeholder="Where are you arrive?" id="inputArriveFrom">
+										</div>
+										<!-- //direction -->
+										<!-- date -->
+										<div class="search_form-date">
+											<div class="row">
+												<div class="col-xs-3 text-left">
+													<label for="date_from" class="search_form-label date_label"></label>
+													<input type="text" id="date_from" class="search_input-date" placeholder="15">
+												</div>
+												<div class="col-xs-6 text-left">
+													<label for="time_from" class="search_form-label time_label"></label>
+													<input type="text" id="time_from" class="search_input-date" placeholder="00:00">
+												</div>
+												<div class="col-xs-3 text-left">
+													<label for="people_from" class="search_form-label people_label"></label>
+													<input type="number" id="people_from" class="search_input-date" placeholder="1">
+												</div>
+											</div>
+										<!-- //row -->
+										</div>
+										<!-- //date -->
+										<input type="submit" class="search_submit" value="Search transfer">
+									</div>
+									<!-- //FROM -->
+								</form>
+								<!-- // form -->
+							</div>
+							<!-- //col -->
+						</div>
+						<!-- //row -->
+					</div>
+					<!-- // container -->
+				</div>
+				<!-- //form mobile -->
+			</div>
+			<!-- //Search form -->
 		</header>
 		<!-- //Header parallax-->
 		
-		<!-- Search form -->
-		<div class="search_wrapper">
-		<!-- form mobile -->
-			<div class="form_mobile">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-							<!-- form -->
-							<form class="clearfix">
-								<!-- TO -->
-								<div class="search_form-to search_form text-left">
-									<h3 class="search_form-title">To</h3>
-									<!-- direction -->
-									<div class="search_form-direction">
-										<span class="search_form-arrow" id="changeInputsValTo"></span>
-										<input type="text" class="search_input" placeholder="Where are you from?" id="inputFromTo">
-										<input type="text" class="search_input" placeholder="Where are you arrive?" id="inputArriveTo">
-									</div>
-									<!-- //direction -->
-									<!-- date -->
-									<div class="search_form-date">
-										<div class="row">
-											<div class="col-xs-3 text-left">
-												<label for="date_to" class="search_form-label date_label"></label>
-												<input type="text" id="date_to" class="search_input-date" placeholder="15">
-											</div>
-											<div class="col-xs-6 text-left">
-												<label for="time_to" class="search_form-label time_label"></label>
-												<input type="text" id="time_to" class="search_input-date" placeholder="00:00">
-											</div>
-											<div class="col-xs-3 text-left">
-												<label for="people_to" class="search_form-label people_label"></label>
-												<input type="number" id="people_to" class="search_input-date" placeholder="1">
-											</div>
-										</div>
-										<!-- //row -->
-									</div>
-									<!-- //date -->
-									<input type="submit" class="search_submit hidden_submit" value="Search transfer">
-								</div>
-								<!-- // TO -->
-								<!-- FROM -->
-								<div class="search_form-from search_form text-left">
-									<h3 class="search_form-title">From</h3>
-									<span class="hide_form menu_close" id="hideForm" data-show="close"></span>
-									<!-- overlay -->
-									<div class="overlay_form" id="overlayForm">
-										<h3 class="search_title overlay_title">From</h3>
-										<span class="overlay_plus" id="showForm" data-show="show"></span>
-									</div>
-									<!-- //overlay -->
-									<!-- direction -->
-									<div class="search_form-direction">
-										<span class="search_form-arrow" id="changeInputsValFrom"></span>
-										<input type="text" class="search_input" placeholder="Where are you from?" id="inputFromFrom">
-										<input type="text" class="search_input" placeholder="Where are you arrive?" id="inputArriveFrom">
-									</div>
-									<!-- //direction -->
-									<!-- date -->
-									<div class="search_form-date">
-										<div class="row">
-											<div class="col-xs-3 text-left">
-												<label for="date_from" class="search_form-label date_label"></label>
-												<input type="text" id="date_from" class="search_input-date" placeholder="15">
-											</div>
-											<div class="col-xs-6 text-left">
-												<label for="time_from" class="search_form-label time_label"></label>
-												<input type="text" id="time_from" class="search_input-date" placeholder="00:00">
-											</div>
-											<div class="col-xs-3 text-left">
-												<label for="people_from" class="search_form-label people_label"></label>
-												<input type="number" id="people_from" class="search_input-date" placeholder="1">
-											</div>
-										</div>
-									<!-- //row -->
-									</div>
-									<!-- //date -->
-									<input type="submit" class="search_submit" value="Search transfer">
-								</div>
-								<!-- //FROM -->
-							</form>
-							<!-- // form -->
-						</div>
-						<!-- //col -->
-					</div>
-					<!-- //row -->
-				</div>
-				<!-- // container -->
-			</div>
-			<!-- //form mobile -->
-		</div>
-		<!-- //Search form -->
+		
 
 		<!-- Journey section -->
 		<div class="journey_wrapper">
@@ -358,23 +359,15 @@
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins)  IF NEEDED-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		 <script src="js/libs.min.js"></script>
-	<script src="js/select.js"></script>
-	<!-- All libs scripts -->
 
+	<!-- All libs scripts -->
+	 <script src="js/libs.min.js"></script>
 
 	<!-- Main file with scripts -->
-	<script src="js/common.min.js"></script>
+	<script src="js/select.js"></script>
 
-	  <script>
-  $( function() {
-    $( "#date_to" ).datepicker();
-  } );
-  </script>
+	<script src="js/common.js"></script>
 
-	<script>
-    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
 </body>
 
 </html>
