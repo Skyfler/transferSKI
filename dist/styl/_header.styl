@@ -5,7 +5,7 @@
 // ~~~~~~~ Top line header ~~~~~~~
 
 .top_line
-	padding 28px 50px
+	padding 10px 50px
 	width 100%
 	position fixed
 	z-index 21
@@ -68,50 +68,43 @@
 header
 	height 100vh
 	position relative
-	overflow-y scroll
 	
 .header
 	background url(../img/sky.png) no-repeat center center
 	background-size cover
-	background-position fixed
 
 .header_text
+	position absolute
+	top 185px
+	left 50%
+	margin-left -460px
+	margin-top -30px
+	z-index -1
 	width 920px
 	height 200px
 	background url(../img/transfer.svg) no-repeat
-	position fixed
 	background-size 100%
-	top 195px
-	left 50%
-	margin-left -460px
-	z-index 2
 
 .header_rock
 	width 100%
 	height 100%
-	position fixed
-	background url(../img/mountain-2.png) no-repeat bottom center 
-
-
-	background-size 100%
+	background url(../img/mountain-2.png) no-repeat
+	background-position 0 0
+	background-size 100% 100%
 	z-index 3
-	
-
-	background-size 100%
-	z-index 3
-	
 
 .header_ski
 	width 350px
 	height 270px
 	background url(../img/ski.svg) no-repeat
-	position fixed
 	background-size 100%
+	position absolute
 	top 215px
 	left 50%
-	z-index 5
+	z-index 2
 	margin-left -175px
-	
+
+
 // mobile 
 .mobile_logo
 	display none

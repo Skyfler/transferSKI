@@ -83,12 +83,9 @@
 // ~~~~~~~~ search form ~~~~~~~~
 .search_wrapper
 	background-color transparent
-	position fixed
+	position relative
+	top -200px
 	z-index 10
-	left 50%
-	transform translate(-50%, 0)
-	top 645px
-
 
 .search_form
 	width 50%
@@ -269,14 +266,3 @@ input.search_input-date:-ms-input-placeholder
 	top 33px
 	cursor pointer
 	
-// datepicker
-#date_to
-	position relative
-.ui-widget-content
-	background-color #fff
-	box-shadow 15px 0 0 rgba(49, 17, 114, .4)
-.ui-widget-header
-	border none
-	backgroung transparent
-	font-size 20px
-	color #243049

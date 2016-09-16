@@ -5,9 +5,11 @@ var transferApp = function () {
 		// Show Logo handler
 		var showLogo = function(e) {
 			var logo = doc.getElementById('transfer_logo'),
+				formWrapper = doc.getElementById('formWrapper'),
+				offsetForm = formWrapper.offsetHeight + formWrapper.offsetTop + 15,
 				topDistance = window.pageYOffset;
 
-			if(topDistance >= 400) {
+			if(topDistance > offsetForm) {
 				logo.style.cssText = "opacity: 1;";
 
 			} else {
@@ -34,35 +36,6 @@ var transferApp = function () {
 		  }
 		});
 
-		window.addEventListener('scroll', function(event) {
-		  var depth, elem, movement, topDistance, translate3d;
-
-		  topDistance = this.pageYOffset;
-		  elem = doc.getElementById("forma");
-		  depth = elem.getAttribute('data-depthh');
-		  movement = -(topDistance * depth);
-		  translate = 'translate(-50%, ' + movement + 'px)';
-		  
-		  elem.style['-webkit-transform'] = translate;
-		  elem.style['-moz-transform'] = translate;
-		  elem.style['-ms-transform'] = translate;
-		  elem.style['-o-transform'] = translate;
-		  elem.style.transform = translate;
-		});
-
-
-		// var parallax = function () {
-		// 	var topDistance = window.pageYOffset,
-		// 		forma = doc.getElementById('forma'),
-		// 		depth=0.02,
-		// 		movement = topDistance * depth;
-
-		// 	while (topDistance < 1000) {
-		// 		forma.style.top = movement + 'px';
-		// 	}
-		// };
-
-		// window.addEventListener('scroll', parallax);
 		// Close/Show mobile menu handler
 		var closeBtn = doc.getElementById('mobile_menu-close'),
 				showBtn = doc.getElementById('mobile_menu-show');
@@ -101,10 +74,10 @@ var transferApp = function () {
 		// Change input value handler
 		var arrowTo = doc.getElementById('changeInputsValTo'),
 				arrowFrom = doc.getElementById('changeInputsValFrom'),
-				inputFromTo = doc.getElementById('inputFromTo'),
-				inputArriveTo = doc.getElementById('inputArriveTo'),
-				inputFromFrom = doc.getElementById('inputFromFrom'),
-				inputArriveFrom = doc.getElementById('inputArriveFrom');
+				inputFromTo = doc.getElementById('static-place'),
+				inputArriveTo = doc.getElementById('static-destination'),
+				inputFromFrom = doc.getElementById('static-place-from'),
+				inputArriveFrom = doc.getElementById('static-destination-from');
 		
 		var changeInputs = function(e) {
 				var target = e && e.target || e.srcElement,
@@ -139,10 +112,10 @@ var transferApp = function () {
 
 		var changeArrowActive = function(e) {
 			var target = e && e.target || e.srcElement;
-			if (target.id === 'inputFromTo' || target.id === 'inputArriveTo') {
+			if (target.id === 'static-place' || target.id === 'static-destination') {
 				arrowTo.classList.add('search_form-arrow--active');
 
-			} else if (target.id === 'inputFromFrom' || target.id === 'inputArriveFrom'){
+			} else if (target.id === 'static-place-from' || target.id === 'static-destination-from'){
 				arrowFrom.classList.add('search_form-arrow--active');
 			}
 		};
@@ -167,11 +140,6 @@ var transferApp = function () {
 		inputFromFrom.addEventListener('focus', changeArrowActive);
 		// inputFromTo.addEventListener('blur', changeArrowBlur);
 		// inputFromFrom.addEventListener('blur', changeArrowBlur);
-
-		
-
-		// Parallax event
-		// window.addEventListener('scroll', parallax);
 
 
 };

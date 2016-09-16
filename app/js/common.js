@@ -34,21 +34,21 @@ var transferApp = function () {
 		  }
 		});
 
-		window.addEventListener('scroll', function(event) {
-		  var depth, elem, movement, topDistance, translate3d;
+		// window.addEventListener('scroll', function(event) {
+		//   var depth, elem, movement, topDistance, translate3d;
 
-		  topDistance = this.pageYOffset;
-		  elem = doc.getElementById("forma");
-		  depth = elem.getAttribute('data-depthh');
-		  movement = -(topDistance * depth);
-		  translate = 'translate(-50%, ' + movement + 'px)';
+		//   topDistance = this.pageYOffset;
+		//   elem = doc.getElementById("forma");
+		//   depth = elem.getAttribute('data-depthh');
+		//   movement = -(topDistance * depth);
+		//   translate = 'translate(-50%, ' + movement + 'px)';
 		  
-		  elem.style['-webkit-transform'] = translate;
-		  elem.style['-moz-transform'] = translate;
-		  elem.style['-ms-transform'] = translate;
-		  elem.style['-o-transform'] = translate;
-		  elem.style.transform = translate;
-		});
+		//   elem.style['-webkit-transform'] = translate;
+		//   elem.style['-moz-transform'] = translate;
+		//   elem.style['-ms-transform'] = translate;
+		//   elem.style['-o-transform'] = translate;
+		//   elem.style.transform = translate;
+		// });
 
 
 		// var parallax = function () {
