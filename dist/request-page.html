@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Starting template</title>
+
+	<!-- All libs styles -->
+	<!-- <link rel="stylesheet" href="css/libs.min.css">
+	-->
+	<link rel="stylesheet" href="css/libs/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/libs/bootstrap.css">
+	<link rel="stylesheet" href="css/select.css">
+
+	<!-- Main file with styles -->
+	<link rel="stylesheet" href="css/style.min.css">
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<!-- CONTENT WRAPPER -->
+	<div class="content_wrapper">
+		
+		<!-- top line -->
+		<div class="top_line top_line-page">
+
+			<div class="row">
+				<!-- Choice the language -->
+				<div class="col-md-4 col-sm-6 col-xs-6 text-left">
+					
+					<div class="top_line-lang">
+						<a href="index.html" class="mobile_logo">T<span>-S</span></a>
+						
+						<!-- Dropdown language-->
+						<div class="dropdowns_wrapper">
+							<div id="dd1" class="dropdown_wrap" tabindex="1">
+								<a href="#" class="first_item">RU</a>
+								<ul class="dropdown">
+									<li><a href="#">ENG</a></li>
+								</ul>
+							</div>
+							<!-- Dropdown language 2-->
+							<div id="dd2" class="dropdown_wrap" tabindex="1">
+								<a href="#" class="first_item">USD</a>
+								<ul class="dropdown">
+									<li><a href="#">RUR</a></li>
+									<li><a href="#">EUR</a></li>
+									<li><a href="#">GBR</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Choice the language -->
+
+				<!-- Logo header -->
+				<div class="col-md-4 col-sm-4 hidden-xs hidden-sm">
+					<a href="index.html" class="top_line-logo top_line-logo--page">
+						<p class="logo_transfer">transfer<span class="logo_ski">-ski</span></p>
+					</a>
+									
+				</div>
+				<!-- //Logo header -->
+
+				<!-- Contacts header -->
+				<div class="col-md-4 col-sm-6 col-xs-6 text-right">
+					<ul class="top_line-contacts">
+						<li class="top_line-contacts--item">
+							<a href="#" class="top_line-phone">+33 966 896 434</a>
+						</li>
+						<li class="top_line-contacts--item">
+							<a href="#" class="top_line-contact-us">Contact us</a>
+						</li>
+					</ul>
+					<!-- Mobile menu button -->
+					<span id="mobile_menu-show" data-action="show" class="menu_show">&nbsp;</span>
+					<!-- // Mobile menu button -->
+				</div>
+				<!-- //Contacts header -->
+			</div>
+			<!-- //row -->
+		</div>
+		<!-- // top line -->
+
+		<!-- Mobile menu -->
+		<div class="mobile_menu popup popup--menu js-popup-menu" id="mobile_menu">
+
+			<h2 class="mobile_title">Menu</h2>
+
+			<span id="mobile_menu-close" class="menu_close" data-action="close"></span>
+
+			<ul class="mobile_menu-list">
+				<li class="mobile_menu-item"><a href="#">About us</a></li>
+				<li class="mobile_menu-item"><a href="#">Contacts<span class="mobile_phone">+33 966 896 434</span></a></li>
+				<li class="mobile_menu-item"><a href="#">Terms & Conditions</a></li>
+				<li class="mobile_menu-item"><a href="#">FAQ</a></li>
+			</ul>
+
+			<ul class="mobile_language-list">
+				<li class="mobile_lang-item"><a href="#" class="active">RU</a></li>
+				<li class="mobile_lang-item"><a href="#">ENG</a></li>
+			</ul>
+
+			<ul class="mobile_language-list">
+				<li class="mobile_lang-item"><a href="#" class="active">USD</a></li>
+				<li class="mobile_lang-item"><a href="#">EUR</a></li>
+				<li class="mobile_lang-item"><a href="#">GBR</a></li>
+			</ul>
+		</div>
+		<!-- // Mobile menu -->
+
+		<!-- Header mobile -->
+		<div class="header_mobile"></div>
+		<!-- // Header mobile -->
+		
+		<!-- Page title wrapper -->
+		<div class="page_title-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 clearfix">
+						<!-- page title -->
+						<h2 class="page_title request_title left">Transfer price request</h2>
+						<!-- // page title -->
+						<!-- Page arrow back -->
+						<a href="index.html" class="page_back">
+							<svg class="page_back-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="198.5 390.5 17 13.1" enable-background="new 198.5 390.5 17 13.1" xml:space="preserve">
+								<path  d="M204.6,403.3l-5.9-5.9c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5l5.9-5.9c0.1-0.1,0.3-0.2,0.5-0.2
+								c0.2,0,0.3,0.1,0.5,0.2l0.9,0.9c0.3,0.3,0.3,0.7,0,0.9l-2.6,2.6c-0.2,0.3-0.1,0.6,0.2,0.6h10.9c0.4,0,0.7,0.3,0.7,0.7v1.3
+								c0,0.4-0.3,0.7-0.7,0.7H204c-0.3,0-0.5,0.3-0.3,0.6l2.6,2.6c0.3,0.3,0.3,0.7,0,0.9l-0.9,0.9c-0.1,0.1-0.2,0.2-0.4,0.2
+								C204.8,403.5,204.7,403.5,204.6,403.3z"/>
+							</svg>
+							Back
+						</a>
+						<!-- // Page arrow back -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Page title wrapper -->
+
+		<!-- Search form -->
+		<div class="search_wrapper search_wrapper-page">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-1 col-sm-12 col-xs-12">
+						<!-- Form wrapper -->
+						<div class="form_wrapper">
+							<!-- form -->
+							<form class="clearfix">
+								<!-- TO -->
+								<div class="search_form-to search_form text-left">
+									<h3 class="search_form-title">To</h3>
+									<!-- direction -->
+									<div class="search_form-direction">
+										<span class="search_form-arrow"></span>
+										<input type="text" class="search_input" id="static-place" placeholder="Where are you from?" name="transfer[place_from_text]">
+										<input type="text" class="search_input" id="static-destination" placeholder="Where are you arrive?" name="transfer[place_to_text]">
+									</div>
+									<!-- //direction -->
+									<!-- date -->
+									<div class="search_form-date">
+						
+										<label for="static-date-away" class="search_form-label date_label"></label>
+										<input type="text" id="static-date-away" name="transfer[date_away]" class="search_input-date search_input-date--page" placeholder="15 Sept">
+									
+										<label for="static-time-away" class="search_form-label time_label"></label>
+										<input type="text" id="static-time-away" name="transfer[time_away]" class="search_input-date search_input-date--page" placeholder="00:00">
+									
+										<label for="people_to" class="search_form-label people_label"></label>
+										<input type="text" name="transfer[passagers]" id="people_to" class="search_input-date search_input-date--page" placeholder="1">		
+									</div>
+									<!-- //date -->
+								</div>
+								<!-- // TO -->
+								<!-- FROM -->
+								<div class="search_form-from search_form no-price text-left">
+									<h3 class="search_form-title">From</h3>
+									<!-- direction -->
+									<div class="search_form-direction">
+										<span class="search_form-arrow"></span>
+										<input type="text" class="search_input"  id="static-place-from" placeholder="Where are you from?">
+										<input type="text" class="search_input"  id="static-destination-from" placeholder="Where are you from?">
+									</div>
+									<!-- //direction -->
+									<!-- date -->
+									<div class="search_form-date">
+								
+										<label for="static-date-back" class="search_form-label date_label"></label>
+										<input type="text" name="transfer[date_back]" id="static-date-back" class="search_input-date search_input-date--page" placeholder="15 Sept">
+								
+										<label for="static-time-back" class="search_form-label time_label"></label>
+										<input type="text" name="transfer[time_back]" id="static-time-back" class="search_input-date search_input-date--page" placeholder="00:00">
+								
+										<label for="people_from" class="search_form-label people_label"></label>
+										<input type="text" id="people_from" class="search_input-date search_input-date--page" placeholder="1">
+							
+									<!-- //row -->
+									</div>
+									<!-- //date -->
+								</div>
+								<!-- //FROM -->
+							</form>
+							<!-- // form -->
+						</div>
+						<!-- // Form wrapper -->
+						
+					</div>
+					<!-- //col -->
+				</div>
+				<!-- //row -->
+			</div>
+			<!-- // container -->
+		</div>
+		<!-- //Search form -->
+		
+		<!-- Personality form wrapper -->
+		<div class="personality_form-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<h3 class="personality_title">Personal data</h3>
+					</div>
+				</div>
+				
+				<div class="row">
+					<!-- Personality form -->
+					<form class="personality_form">
+						<!-- Personal data -->
+						<div id="personalData" class="personal_data clearfix">
+							<div class="col-md-6 col-md-offset-1">
+								<input type="text" class="personality-input" data-id="name">
+								<span class="required">*</span>
+								<span class="placeholder" data-placeholder="name">Full name</span>
+							</div>
+							<div class="col-md-6 col-md-offset-1">
+								<input type="text" class="personality-input" data-id="mail">
+								<span class="required">*</span>
+								<span class="placeholder" data-placeholder="mail">E-mail</span>
+							</div>
+							<div class="col-md-6 col-md-offset-1" >
+								<input type="text" class="personality-input" data-id="phone">
+								<span class="placeholder" data-placeholder="phone">Phone number</span>
+							</div>
+						</div>
+						<!-- // Personal data -->
+
+						<!-- Additionaly -->
+						<div class="col-md-10 col-md-offset-1">
+							<h3 class="personality_title">Additionaly</h3>
+						</div>
+						
+						<!-- Additionaly wrapper -->
+						<div class="additionaly_wrapper clearfix">
+							<div class="col-md-6 col-md-offset-1 checkboxes clearfix">
+								<input id="babyChair" class="baby_input" type="text" placeholder="0">
+								<label for="babyChair" class="checkbox_label">Baby chair</label>
+								<label for="oversizedLuggage" class="checkbox_label clearfix">
+									<input id="oversizedLuggage" type="checkbox">
+									<span>Oversized luggage</span>
+								</label>
+							</div>
+
+							<div class="col-md-6 col-md-offset-1">
+								<textarea name="" id="" class="personality-input personality-text" placeholder="Comment"></textarea>
+							</div>
+
+							<div class="col-md-10 col-md-offset-1">
+								<input type="submit" class="search_submit search_submit-page" value="Send request">
+							</div>
+						</div>
+						<!-- // Additionaly wrapper -->
+						<!-- //Additionaly --> 
+					</form>
+					<!-- // Personality form -->
+				</div>
+			</div>
+			<!-- // container -->
+		</div>
+		<!-- //Personality form wrapper -->
+
+
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container-fluid">
+				<div class="row">
+					<!-- Footer copyright -->
+					<div class="col-md-3 col-sm-3 col-xs-6 no-padding text-left">
+						<div class="footer_copy">
+							<p class="transfer_copy">Transfer-ski,<span class="copy_year">2016</span></p>
+						</div>
+					</div>
+					<!-- //Footer copyright -->
+					
+					<!-- Footer menu -->
+					<div class="col-md-9 col-sm-9 col-xs-6 text-right">
+						<nav class="footer_nav">
+							<ul class="footer_menu">
+								<li class="footer_menu--item"><a href="">+33 966 896 434</a></li>
+								<li class="footer_menu--item"><a href="">About us</a></li>
+								<li class="footer_menu--item"><a href="">Contact</a></li>
+								<li class="footer_menu--item"><a href="">Terms&Condition</a></li>
+								<li class="footer_menu--item"><a href="">FAQ</a></li>
+							</ul>
+						</nav>
+						<a href="#" class="mobile_footer-phone">+33 966 896 434</a>
+					</div>
+					<!-- //Footer menu -->
+				</div>
+				<!-- // row -->
+			</div>
+			<!-- // container -->
+		</footer>
+		<!-- //Footer -->
+
+	</div>
+
+	<!-- //CONTENT WRAPPER -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins)  IF NEEDED-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/libs/bootstrap.js"></script>
+	<script src="js/select.js"></script>
+	<!-- All libs scripts -->
+	<!-- <script src="js/libs.min.js"></script>
+-->
+	<!-- Main file with scripts -->
+	<script src="js/request.js"></script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+
+</html>

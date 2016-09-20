@@ -131,26 +131,7 @@ var transferApp = function () {
 	searchFormSubmitBtn.addEventListener('click', showErrorPopup);
 	searchFormMobileSubmitBtn.addEventListener('click', showErrorPopup);
 
-	// Show/Hide error form
-	var showErrorFormBtn = doc.getElementById('showErrorFormBtn'),
-		closeErrorFormBtn = doc.getElementById('closeErrorFormBtn'),
-		errorHiddenForm = doc.getElementById('errorHiddenForm');
-
-	var showErrorForm = function (e) {
-		var target = e && e.target|| e.srcElement;
-			if(target.id === 'showErrorFormBtn') {
-				errorHiddenForm.style.right = "0";
-		}
-	};
-
-	var hideErrorForm = function (e) {
-		var target = e && e.target|| e.srcElement;
-		if(target.id === 'closeErrorFormBtn') {
-			errorHiddenForm.style.right = "-100%";
-			errorPopup.style.cssText = "opacity: 0; z-index: -1";
-		}
-	};
-
+	
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EVENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	// Show logo event
@@ -174,14 +155,6 @@ var transferApp = function () {
 
 	// Close error popup
 	errorPopupHideBtn.addEventListener('click', hideErrorPopup);
-
-	// Show/Close error form
-	showErrorFormBtn.addEventListener('click', showErrorForm);
-	closeErrorFormBtn.addEventListener('click', hideErrorForm);
-
-	// autoresize textarea
-    // $('#error_text').autosize();   
-
 };
 
 window.addEventListener('DOMContentLoaded', transferApp);

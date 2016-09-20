@@ -1,0 +1,190 @@
+@import '_vars.styl'
+
+
+// Top line
+.top_line-page
+	position relative
+	margin-bottom 40px
+	
+	.top_line-logo--page
+		opacity 1
+
+// Search form
+.search_wrapper-page
+	top 0
+	margin-bottom 20px
+	
+	.search_form
+		padding 25px 30px
+	.no-price
+		padding 25px 30px 25px 50px
+	.search_form-title
+		font-size 14px
+		margin-bottom 15px
+		
+	.search_form-direction 
+		margin-bottom 30px
+		padding-left 30px
+		.search_input	
+			margin-bottom 5px
+			padding-bottom 0
+			border-bottom none
+			font-size 16px
+			color #fff
+	.search_form-arrow
+		top 0
+		width 14px
+		height 44px
+		background url(../img/search-arrow-page.png) no-repeat
+	
+	// date
+	.search_form-date
+		margin-bottom 0
+		padding-left 0
+	.search_form-label
+		display inline-block
+		margin-bottom 0
+	.search_input-date--page
+		font-size 20px
+		display inline-block
+		height 20px
+		width 60px
+		margin-right 5px
+		background transparent
+		&:last-child
+			margin-right 0
+		
+	input.search_input-date--page::-webkit-input-placeholder
+		font-size 20px
+	input.search_input-date--page::-moz-placeholder
+		font-size 20px
+	input.search_input-date--page:-moz-placeholder
+		font-size 20px
+	input.search_input-date--page:-ms-input-placeholder
+		font-size 20px
+		
+// Personality form
+.personality_form-wrapper
+	margin-bottom 20px
+	
+	.personality_title
+		font-size 30px
+		font-family "FuturaHeavy", Arial, sans-serif
+		color $title-color
+		margin 0 0 20px 0
+	
+	.personal_data
+		margin-bottom 20px
+	
+	.personality-input
+		position relative
+		padding 20px 40px
+		display block
+		width 100%
+		background-color #f1f1f1
+		border none
+		box-shadow none
+		color $title-color
+		font-size 20px
+		font-family "FuturaHeavy", Arial, sans-serif
+		margin-bottom 10px
+		&:focus
+			outline none
+	
+	.placeholder,
+	.required
+		position absolute
+		color $title-color
+		font-size 20px
+
+	.required
+		font-family "FuturaHeavy", Arial, sans-serif
+		top 50%
+		transform translate(0, -50%) 
+		right 40px
+	
+	.placeholder
+		margin-top -5px
+		opacity .43
+		top 50%
+		transform translate(0, -50%)
+		left 54px
+		transition all .25s ease-in-out
+		
+	.checkboxes
+		margin-bottom 20px
+		
+	.checkbox_label
+		cursor pointer
+		display inline-block
+		font-size 20px
+		color $title-color
+		margin 0 100px 0 0
+		font-family "FuturaBook", Arial, sans-serif
+		input
+			display none
+		span
+			margin-left 10px
+	.baby_input
+		width 30px
+		height 30px
+		margin-right 10px
+		display inline-block
+		background #f1f1f1
+		transition all .25s ease-in-out
+		border 2px solid transparent
+		text-align center
+		font-size 16px
+		float left
+		&:focus
+			outline none
+			border 2px solid $purple-color !important
+	.checkbox_label
+		input + span:before 
+			content ''
+			width 30px
+			height 30px
+			background #f1f1f1
+			display flex
+			align-items center
+			box-pack center
+			justify-content center
+			flex-pack center
+			float left
+			transition all .25s ease-in-out
+	
+	.checkbox_label
+		input:checked + span:before
+			content ''
+			background $purple-color
+		
+			
+	// textarea
+	.personality-text
+		resize none
+		height 135px
+		margin-bottom 40px
+	
+	input.personality-text::-webkit-input-placeholder
+		color $title-color
+		font-size 20px
+		font-family "FuturaBook", Arial, sans-serif
+	input.personality-text::-moz-placeholder
+		color $title-color
+		font-size 20px
+		font-family "FuturaBook", Arial, sans-serif
+	input.personality-text:-moz-placeholder
+		color $title-color
+		font-size 20px
+		font-family "FuturaBook", Arial, sans-serif
+	input.personality-text:-ms-input-placeholder
+		color $title-color
+		font-size 20px
+		font-family "FuturaBook", Arial, sans-serif
+			
+.search_submit-page 
+	color #fff
+	background $purple-color
+
+	
+			

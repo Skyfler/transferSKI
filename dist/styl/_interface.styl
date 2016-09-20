@@ -1,6 +1,37 @@
 // search form to/from
 @import '_vars.styl'
 
+// ~~~~~~~~~page title~~~~~~~~~~~~~
+.page_title-wrapper
+	margin-bottom 40px
+	position relative
+.page_title
+	font-size 60px
+	font-family "FuturaHeavy", Arial, sans-serif
+	margin 0
+	color $title-color
+	
+.page_back
+	position absolute
+	right 20px
+	bottom 0
+	color $purple-color
+	font-size 16px
+	font-family 'FuturaMedium', Arial, sans-serif
+	transition all .25s ease-in-out
+	&:hover
+		text-decoration none
+		color $blue-color
+		.page_back-arrow
+			fill $blue-color
+		
+.page_back-arrow
+	fill $purple-color
+	transition all .25s ease-in-out
+	width 17px
+	height 8px
+	
+
 
 // ~~~~~~~~~mobile menu~~~~~~~~~~
 // mobile menu
@@ -90,6 +121,9 @@
 
 .form_wrapper
 	position relative
+	form
+		position relative
+		z-index 1
 	
 .search_form
 	width 50%
@@ -315,139 +349,12 @@ input.search_input-date:-ms-input-placeholder
 	.error_btn
 		width 290px
 		display inline-block
-		
-// hidden error form
-
-.error_form-wrapper
-	position fixed
-	padding 90px 0
-	overflow-y hidden
-	top 0
-	right -100%
-	width 100%
-	height 100%
-	background #7ae0ef 
-	background linear-gradient(135deg,  #7ae0ef 0%,#8556fe 100%)
-	z-index 70
-	transition all .25s ease-in-out
-	
-	.error_form-title
-		color #fff
-		margin 0 0 90px 0
-		font-size 60px
-		font-family "FuturaHeavy", Arial, sans-serif
-
-.error_inputs-wrap
-	text-align left
-	margin-bottom 65px
-	label
-		text-transform uppercase
-		color #fff
-		display block
-		margin-bottom 40px
-		font-size 20px
-		font-family "FuturaHeavy", Arial, sans-serif
-		cursor pointer
-	.error_input
-		display block
-		width 100%
-		position relative
-		border none
-		border-bottom 1px solid #a5bff9
-		box-shadow none
-		background transparent
-		font-size 40px
-		color #fff
-		padding 0 30px 10px 0
-		transition all .25s ease-in-out
-		&:hover,
-		&:focus
-			border-bottom-color #fff
-		&:focus
-			outline none
-		&:after
-			content '*'
-			width 20px
-			height 20px
-			font-size 30px
+		&:hover
+			text-decoration none
 			color #fff
-			position absolute
-			right 0
-			top 5px
-		.error_close
-			z-index 100
 		
-input.error_input::-webkit-input-placeholder 
-	color #fff
-	opacity .2
-	font-size 40px
-input.error_input::-moz-placeholder          
-	color #fff
-	opacity .2
-	font-size 40px
-input.error_input:-moz-placeholder           
-	color #fff
-	opacity .2
-	font-size 40px
-input.error_input:-ms-input-placeholder      
-	color #fff
-	opacity .2
-	font-size 40px
-	
-textarea.error_message::-webkit-input-placeholder 
-	color #fff
-	opacity .2
-	font-size 40px
-textarea.error_message::-moz-placeholder          
-	color #fff
-	opacity .2
-	font-size 40px
-textarea.error_message:-moz-placeholder           
-	color #fff
-	opacity .2
-	font-size 40px
-textarea.error_message:-ms-input-placeholder      
-	color #fff
-	opacity .2
-	font-size 40px
-	
-// textarea
 
-.error_message
-	display block
-	width 100%
-	height 60px
-	overflow hidden
-	resize none
-	font-size 40px
-	background-color transparent
-	color #fff
-	padding 0 30px 0 0
-	transition all .25s ease-in-out
-	box-shadow none
-	border none
-	border-bottom 1px solid #a5bff9
-	&:hover,
-	&:focus
-		border-bottom-color #fff
-	&:focus
-		outline none
 
-// success block
 
-.success_wrapper
-	position fixed
-	padding 90px 0
-	top 0
-	left 0
-	width 100%
-	height 100%
-	background #7ae0ef 
-	background linear-gradient(135deg,  #7ae0ef 0%,#8556fe 100%)
-	z-index 72
-	.succes_descr
-		color #fff
-		line-height 30px
-	
 
 		

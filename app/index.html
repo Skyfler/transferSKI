@@ -8,7 +8,7 @@
 
 	<!-- All libs styles -->
 	 <link rel="stylesheet" href="css/libs.min.css">
-
+	
 	<link rel="stylesheet" href="css/select.css">
 
 	<!-- Main file with styles -->
@@ -215,8 +215,8 @@
 								<div class="error_wrapper" id="errorPopup">
 									<div class="error_popup text-center">
 										<span id="hideErrorPopupBtn" class="menu_close hide_form"></span>
-										<p class="error_descr">Данное направление пока не доступно в автоматическом режиме. Пожалуйста, свяжитесь с оператором.</p>
-										<button id="showErrorFormBtn" class="search_submit error_btn">Написать о проблеме</button>
+										<p class="error_descr">К сожалению, данное направление пока не доступно в автоматическом режиме.</p>
+										<a href="request-page.html" id="showErrorFormBtn" class="search_submit error_btn">Запросить стоимость</a>
 									</div>
 								</div>
 								<!-- //Hidden EROR popup -->
@@ -368,80 +368,23 @@
 		</footer>
 		<!-- //Footer -->
 
-		<!-- Hidden ERROR FORM -->
-		<div class="error_form-wrapper" id="errorHiddenForm">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1 clearfix">
-						<h2 class="error_form-title left">Contact us</h2>
-						<span id="closeErrorFormBtn" class="menu_close error_close right"></span>
-					</div>
-				</div>
-				<div class="row">
-					<!-- Hidden form -->
-					<form>
-						<div class="error_inputs-wrap clearfix">
-							<div class="col-xs-10 col-xs-offset-1">
-								<label for="userName">What's your name?</label>
-								<input id="userName" class="error_input" type="text" name="user_name" placeholder="John Snow">
-							</div>
-						</div>
-						<div class="error_inputs-wrap clearfix">
-							<div class="col-xs-10 col-xs-offset-1">
-								<label for="userMail">your e-mail</label>
-								<input id="userMail" class="error_input" type="text" name="user_email" placeholder="your@mail.com">
-							</div>
-						</div>
-						<div class="error_inputs-wrap clearfix">
-							<div class="col-xs-10 col-xs-offset-1">
-								<div class="error_message-wrap">
-									<label for="userMessage">Type your message</label>
-									<textarea class="error_message" name="error_message" id="error_text" placeholder="Hello, thank’s for your service... "></textarea>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-10 col-xs-offset-1 clearfix">
-							<input id="error_form_submit" class="search_submit error_submit" value="Send" type="submit">
-						</div>
-					</form>
-					<!-- //hidden form -->
-				</div>
-				<!-- //row -->
-				<!-- Success block -->
-				<!-- <div class="success_wrapper">
-					<div class="row">
-						<div class="col-xs-10 col-xs-offset-1 clearfix">
-							<h2 class="error_form-title">Thank you!</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6 col-sm-offset-1 col-xs-12">
-							<p class="succes_descr">Thank you for using our service. We guarantee quality and comfort during the trip. Our manager will contact you shortly to confirm your order.</p>
-						</div>
-					</div>	
-				</div> -->
-				<!-- //Success block -->
-			</div>
-			<!-- //container -->
-		</div>
-		<!-- //Hidden ERROR FORM -->
-
 	</div>
 
 	<!-- //CONTENT WRAPPER -->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins)  IF NEEDED-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="js/libs.min.js"></script>
-	<script src="js/select.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 	<!-- All libs scripts -->
+	 <script src="js/libs.min.js"></script>
 
-	<!-- Main file with scripts -->
+	<!-- Main files with scripts -->
+	<script src="js/select.js"></script>
 	<script src="js/scroll.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/common.min.js"></script>
 
+</body>
 
 </html>
