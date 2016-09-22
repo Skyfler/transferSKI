@@ -33,6 +33,31 @@
 		.search_form,
 		.no-price
 			padding 25px 0 25px 15px
+			
+	//~~~~~~~~~~~~~~~~~RESULT PAGE~~~~~~~~~~~~~~~~~
+	.route_wrapper
+		padding 40px 0
+	
+	.route_wrapper--fixed
+		padding 20px 0
+		.route_destination
+			color #fff
+			font-size 20px
+			&:after
+				top 4px
+		.route_change-link
+			border 1px solid #fff
+			color #fff
+		.route_change-link
+			padding 15px
+		
+	.route_destination
+		font-size 20px
+		&:after
+			top 4px
+			
+	.route_change-link
+		padding 15px
 +max-screen(1100px)
 	// journey
 	.journey_wrapper
@@ -41,6 +66,8 @@
 	.journey_title
 		font-size 130px
 		margin-bottom 40px
+		
+	
 		
 +max-screen(992px)
 	// Header
@@ -145,7 +172,7 @@
 		background #fff url(../img/header-bg.png) no-repeat center bottom
 		padding-top 310px
 		background-size cover
-		height calc(100vh - 30px)
+		height 100vh
 		position relative
 		top 0
 	.form_mobile
@@ -158,7 +185,11 @@
 		background none !important
 		padding-top 0 !important
 		height auto !important
-			
+		
+	.search_wrapper-result
+		height auto !important
+		padding 80px 0 
+		
 	// countries
 	.country
 		margin-bottom 30px
@@ -226,12 +257,6 @@
 		font-size 20px
 	
 
-+max-screen(768px) 
-	.journey_text
-		padding-left 265px
-	.alps_text
-		padding-right 265px
-
 +max-screen(766px)
 	.journey_text
 		padding 0 20px 0 220px
@@ -291,6 +316,69 @@
 		.search_form-arrow
 			background url(../img/search-arrow-page.png) no-repeat
 			top 0
+			
+	// result page
+	.search_wrapper-result 
+		padding 60px 0 0 0
+		.search_submit
+			width 100%
+		// route
+	.route_wrapper,
+	.route_wrapper--fixed
+		padding 25px 0
+		margin-bottom 55px
+		.left,
+		.right
+			float none
+		.route_description
+			margin 0
+			padding-left 25px
+			position relative
+			&:after
+				content ''
+				width 14px
+				height 78px
+				background url(../img/arrow-route.png) no-repeat center center
+				position absolute
+				top 0
+				left 0
+		.route_destination
+			display block
+			font-size 20px
+			margin 0
+			&:after
+				display none
+			&:last-child
+				margin 0 0 35px 0
+			
+	// result wrapper
+	.result_item
+		margin-bottom 70px
+		&:last-child
+			margin-bottom 55px
+		
+	.result_card-wrapper
+		float none
+		width 100%
+		.book_transfer
+			display none 
+		.book_transfer-mobile
+			display block
+	.result_item-card
+		padding 10px 15px
+	
+	.result_item-card--descr
+		padding 0
+
+	.result_item-transfer
+		float none
+		width 100%
+		position relative
+		margin-bottom 35px
+	
+	.route_change-link
+		display block
+		text-align center
 	// journey
 	.journey_wrapper
 		padding-bottom 180px	
@@ -384,6 +472,7 @@
 	.personality_form-wrapper 
 		.checkbox_label
 			margin-bottom 20px !important
+			margin-right 0 !important
 
 	.search_wrapper-page 
 		.search_input-date--page

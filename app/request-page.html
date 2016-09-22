@@ -7,8 +7,10 @@
 	<title>Starting template</title>
 
 	<!-- All libs styles -->
-	 <link rel="stylesheet" href="css/libs.min.css">
-	
+	<!-- <link rel="stylesheet" href="css/libs.min.css">
+	-->
+	<link rel="stylesheet" href="css/libs/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/libs/bootstrap.css">
 	<link rel="stylesheet" href="css/select.css">
 
 	<!-- Main file with styles -->
@@ -257,19 +259,17 @@
 						
 						<!-- Additionaly wrapper -->
 						<div class="additionaly_wrapper clearfix">
-							<div class="col-md-6 col-md-offset-1 checkboxes">
-								<label for="babyChair" class="checkbox_label">
-									<input id="babyChair" type="checkbox">
-									<span>Baby chair</span>
-								</label>
-								<label for="oversizedLuggage" class="checkbox_label">
+							<div class="col-md-6 col-md-offset-1 checkboxes clearfix">
+								<input id="babyChair" class="baby_input" type="text" placeholder="0">
+								<label for="babyChair" class="checkbox_label">Baby chair</label>
+								<label for="oversizedLuggage" class="checkbox_label clearfix">
 									<input id="oversizedLuggage" type="checkbox">
 									<span>Oversized luggage</span>
 								</label>
 							</div>
 
 							<div class="col-md-6 col-md-offset-1">
-								<textarea name="" id="" class="personality-input personality-text" placeholder="Comment"></textarea>
+								<textarea class="personality-input personality-text" placeholder="Comment"></textarea>
 							</div>
 
 							<div class="col-md-10 col-md-offset-1">
@@ -327,9 +327,11 @@
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins)  IF NEEDED-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/libs/bootstrap.js"></script>
 	<script src="js/select.js"></script>
 	<!-- All libs scripts -->
-	<script src="js/libs.min.js"></script>
+	<!-- <script src="js/libs.min.js"></script>
+-->
 	<!-- Main file with scripts -->
 	<script src="js/request.js"></script>
 

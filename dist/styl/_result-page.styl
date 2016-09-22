@@ -1,0 +1,204 @@
+@import '_vars.styl'
+
+// top line
+
+.top_line-result
+	position absolute
+	top 0
+	left 0
+	.top_line-logo--page
+		opacity 1
+
+// search form
+.search_wrapper-result
+	padding 130px 0
+	top 0
+	background url(../img/header-bg.png) no-repeat 100% 50%
+	background-size cover
+	
+	.overlay_form
+		right -100%
+		
+	.search_submit
+		width 220%
+		
+// route wrapper
+.route_wrapper
+	padding 75px 0
+	width 100%
+	position relative
+	background-color transparent
+	transition all .4s ease-in-out
+
+.route_wrapper--fixed
+	position fixed
+	width 100%
+	top 0
+	left 0
+	padding 45px 0
+	background-color $purple-color
+	z-index 30
+	.route_destination
+		color #fff
+	.route_change-link
+		border 1px solid #fff
+		color #fff
+	
+.route_description
+	margin-top 15px	
+.route_destination
+	font 30px 'FuturaHeavy', Arial, sans-serif
+	color $title-color
+	margin 0 105px 0 0
+	position relative
+	display inline-block
+	&:after
+		content ''
+		position absolute
+		width 68px
+		height 23px
+		top 7px
+		right -90px
+		background url(../img/arrow-span.png) no-repeat center center
+	&:last-child
+		margin 0
+		&:after
+			display none
+			
+.route_change-link
+	display inline-block
+	font 16px 'FuturaMedium', Arial, sans-serif
+	padding 20px 15px
+	border 1px solid $purple-color
+	color $purple-color
+	transition all .25s ease-in-out
+	&:hover
+		background $blue-color
+		color #fff
+		border-color $blue-color
+		text-decoration none
+		
+// result item
+.result_item
+	margin-bottom 20px
+	color $title-color
+	position relative
+	&:last-child
+		margin-bottom 150px
+		
+.result_card-wrapper
+	float left
+	width 58%
+	position relative
+	transition all .25s ease-in-out
+	overflow hidden
+	// .book_transfer-mobile
+	// 	display none
+	&:hover
+		.book_transfer
+			top 0
+			
+.result_item-card
+	border 5px solid #e8e8e8
+	padding 20px 30px 
+	
+	
+.result_item-card--header
+	margin-bottom 25px
+	
+.result_item-title
+	display inline-block
+	padding-top 10px
+	font 20px 'FuturaHeavy', Arial, sans-serif
+	line-height 30px
+	margin 0
+	text-transform uppercase
+	vertical-align bottom
+
+.result_item-price
+	vertical-align bottom
+	color $blue-color
+	font 30px 'FuturaHeavy', Arial, sans-serif
+	
+.result_item-card--descr
+	padding-right 100px
+	margin 0 0 30px 0
+
+	
+.result_item-info
+	display inline-block
+	position relative
+	margin-right 65px
+	padding-left 20px
+	&:after
+		content ''
+		position absolute
+		left 0
+		top 3px
+		width 13px
+		height 13px
+		background url(../img/book-sprite.png) no-repeat
+		background-position 0 0
+	&:last-child
+		margin-right 0
+		&:after
+			background-position -18px 0
+			
+.result_item-transfer
+	float right
+	position absolute
+	right 0
+	bottom 0
+	width 42%
+	height auto
+		
+//  book transfer link
+.book_transfer
+	width 100%
+	height 100%
+	position absolute
+	z-index 20
+	top -100%
+	left 0
+	background rgba($blue-color, .95)
+	font 20px 'FuturaHeavy', Arial, sans-serif
+	color #fff
+	display flex
+	flex-direction column 
+	justify-content center 
+	align-items center
+	transition all .25s ease-in-out
+	&:hover
+		text-decoration none
+		color #fff
+	.book_icon
+		width 31px
+		height 30px
+		background url(../img/book-sprite.png) no-repeat
+		background-position 0 -13px
+		display block
+
+.book_transfer-mobile
+	width 100%
+	padding 15px 0
+	display none
+	margin-top 20px
+	background-color $blue-color
+	color #fff
+	font-size 16px
+	text-align center
+	&:hover
+		text-decoration none
+		padding-left 40px
+	.book_link
+		position relative
+		&:after
+			content ''
+			position absolute
+			top -5px
+			left -40px
+			width 31px
+			height 30px
+			background url(../img/book-sprite.png) no-repeat
+			background-position 0 -13px
+			display inline-block
