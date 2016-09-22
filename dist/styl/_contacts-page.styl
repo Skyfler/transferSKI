@@ -1,0 +1,37 @@
+@import '_vars.styl'
+
+.contacts_item
+	margin-bottom 60px
+	&:last-child
+		margin-bottom 0
+		
+.contacts_item-link
+	display inline-block
+	vertical-align middle
+	margin-left 40px
+	color $title-color
+	font 30px 'FuturaMedium', Arial, sans-serif
+	transition all .25s ease-in-out
+	&:hover
+		color $blue-color
+		text-decoration none
+	
+.contacts_item-phone
+	vertical-align middle
+	display inline-block
+	width 36px	
+	height 41px
+	background url(../img/contacts-sprite.png) no-repeat 0 0
+.contacts_item-mail
+	vertical-align middle
+	display inline-block
+	width 36px
+	height 28px
+	background url(../img/contacts-sprite.png) no-repeat 0 -41px
+	
+.contacts_item-skype
+	vertical-align middle
+	display inline-block
+	width 36px
+	height 34px
+	background url(../img/contacts-sprite.png) no-repeat 0 -69px
