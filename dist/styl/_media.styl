@@ -145,7 +145,7 @@
 	.about_us-wrapper
 		.page_title
 			margin 0
-	.about_us-text
+	.page_text
 		margin 50px 0
 	.about_us-wrapper
 		.small_title
@@ -272,6 +272,16 @@
 			font-size 30px
 	.about_us-text--column
 		margin-top 0
+	//~~~~~~~~~~~~~~~~TERMS~~~~~~~~~~~~~~~~~~~~~
+	.terms_wrapper
+		.small_title
+			font-size 20px
+	.terms_content 
+		.terms_list-item
+			margin 40px 0
+			&:before
+				font-size 20px
+
 
 +max-screen(766px)
 	.journey_text
@@ -474,60 +484,6 @@
 
 	.search_submit
 		padding 14px 0
-		
-
-	// ~~~~~~~~~~~~~~~PAGE~~~~~~~~~~~~~~~~~
-	.top_line-page
-		margin-bottom 20px
-	.page_title-wrapper
-		margin-bottom 25px
-	// search form page
-	.page_title
-		font-size 30px
-		
-	.personality_form-wrapper 
-		.checkbox_label
-			margin-bottom 20px !important
-			margin-right 0 !important
-
-	.search_wrapper-page 
-		.search_input-date--page
-			margin-right 30px
-			&:last-child
-				width 30px
-				margin-right 0
-		.search_form
-			padding 20px 0 20px 20px 
-			
-	// ~~~~~~~~~~~~~ABOUTUS~~~~~~~~~~~~~~
-	.about_us-wrapper
-		.small_title
-			font-size 20px
-			margin-top 35px
-	.about_us-text
-		margin 35px 0
-		font-size 12px
-		line-height 18px
-	.about_us-text--column
-		margin-top 0
-	// journey
-	.journey_wrapper
-		padding-bottom 240px
-	
-	.journey_title-wrap
-		padding-left 100px
-		text-align left
-	.journey_title,
-	.alps_title
-		font-size 45px
-		&:after
-			font-size 16px
-	
-	.journey_text
-		padding-left 100px
-		.journey_descr
-			font-size 14px
-			line-height 25px
 	
 	// alps
 	.alps_wrapper
@@ -562,6 +518,92 @@
 	.mobile_footer-phone
 		font-size 14px
 
+		
+
+	// ~~~~~~~~~~~~~~~PAGE~~~~~~~~~~~~~~~~~
+	.top_line-page
+		margin-bottom 20px
+	.page_title-wrapper
+		margin-bottom 25px
+	// search form page
+	.page_title
+		font-size 30px
+		
+	.personality_form-wrapper 
+		.checkbox_label
+			margin-bottom 20px !important
+			margin-right 0 !important
+
+	.search_wrapper-page 
+		.search_input-date--page
+			margin-right 30px
+			&:last-child
+				width 30px
+				margin-right 0
+		.search_form
+			padding 20px 0 20px 20px 
+			
+	// ~~~~~~~~~~~~~ABOUTUS~~~~~~~~~~~~~~
+	.about_us-wrapper
+		.small_title
+			font-size 20px
+			margin-top 35px
+	.page_text
+		margin 35px 0
+		font-size 12px
+		line-height 18px
+	.about_us-text--column
+		margin-top 0
+	// journey
+	.journey_wrapper
+		padding-bottom 240px
+	
+	.journey_title-wrap
+		padding-left 100px
+		text-align left
+	.journey_title,
+	.alps_title
+		font-size 45px
+		&:after
+			font-size 16px
+	
+	.journey_text
+		padding-left 100px
+		.journey_descr
+			font-size 14px
+			line-height 25px
+			
+		//~~~~~~~~~~~~~~~~TERMS~~~~~~~~~~~~~~~~~~~~~
+	.terms_wrapper
+		.small_title
+			font-size 16px
+			margin 0 0 20px 0
+			padding-left 20px
+		.page_title 
+			margin-top 10px
+	.terms_content 
+		.terms_list-item
+			margin 0 0 35px 0
+			&:before
+				font-size 16px
+	.terms_content 
+		li 
+			& + li
+					margin-top 30px
+	.terms_content 
+		ol 
+			li
+				ol
+					li
+						line-height 18px
+						font-size 12px
+						padding-left 20px
+	.terms_wrapper 
+		.terms_text
+			margin 35px 0
+
+	
+	
 +max-screen(380px)
 	// error popup
 	.error_wrapper 

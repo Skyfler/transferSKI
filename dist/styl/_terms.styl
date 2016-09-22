@@ -1,0 +1,60 @@
+@import '_vars.styl'
+
+
+.terms_wrapper
+	.page_title
+		margin 30px 0 0 0
+	.small_title
+		padding-left 35px
+		margin 90px 0 55px 0
+	
+	.terms_text
+		margin 55px 0 0 0
+	.terms_text-footer
+		margin 0 0 90px 0
+
+
+.terms_content
+
+	ol
+		list-style decimal inside
+		counter-reset section
+		list-style-type none
+   
+	li
+		position relative
+
+		&:before
+			content ''
+			position absolute
+			display block
+			left 0
+			top 0
+			counter-increment section
+			content counters(section, ".")
+	li
+		&:before
+			top 0px
+		& + li
+			margin-top 35px
+ 
+
+
+.terms_content 
+	ol 
+		li
+			ol
+				li
+					color $title-color
+					line-height 30px
+					padding-left 35px
+
+			
+	.terms_list-item
+		margin 90px 0 55px 0
+		&:before
+			top -3px
+			font-size 30px
+			font-family 'FuturaHeavy', Arial, sans-serif
+			color inherit
+
