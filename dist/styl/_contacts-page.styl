@@ -1,7 +1,9 @@
 @import '_vars.styl'
 
 .contacts_item
-	margin-bottom 60px
+	margin-bottom 43px
+	&:first-child
+		margin-top 20px
 	&:last-child
 		margin-bottom 0
 		
@@ -12,9 +14,11 @@
 	color $title-color
 	font 30px 'FuturaMedium', Arial, sans-serif
 	transition all .25s ease-in-out
+	border-bottom 8px solid transparent
 	&:hover
-		color $blue-color
+		color $title-color
 		text-decoration none
+		border-bottom-color $blue-color
 	
 .contacts_item-phone
 	vertical-align middle
@@ -35,3 +39,20 @@
 	width 36px
 	height 34px
 	background url(../img/contacts-sprite.png) no-repeat 0 -69px
+	
+// contact form
+.input_wrapper
+	position relative
+	
+.contact_form-wrapper
+	margin-bottom 80px
+	.placeholder
+		margin-top 0
+		left 40px
+	.required
+		margin-top 6px
+		right 30px
+	.personality-input
+		padding-right 50px
+	.personality-text
+		margin-bottom 10px

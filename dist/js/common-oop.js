@@ -21,7 +21,7 @@ function TransferApp () {
 	this.inputArriveFrom = this.doc.getElementById('static-destination-from');
 	// Show/Hide transfewr form popup buttons
 	this.errorPopupHideBtn = this.doc.getElementById('hideErrorPopupBtn');
-	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~REQUEST PAGE~~~~~~~~~~~~~~~~~~~~~~~~~~
+	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~REQUEST/BOOKING PAGE~~~~~~~~~~~~~~~~~~~~~~~~~~
 	this.inputBabyChair = this.doc.getElementById('babyChair');
 	this.personalDataForm = this.doc.getElementById('personalData');
 	this.inpPersonalDataFormPlaceholders = this.doc.querySelectorAll('.placeholder');
@@ -34,9 +34,6 @@ function TransferApp () {
 
 // Initial all methods
 TransferApp.prototype.init = function() {
-	// Inspection elements
-
-
 	// ShowLogo Event
 	window.addEventListener('scroll', this.showLogo.bind(this));
 	// Parallax
@@ -58,11 +55,10 @@ TransferApp.prototype.init = function() {
 	this.searchFormSubmitBtn.addEventListener('click', this.toggleSearchErrorPopup.bind(this));
 	this.searchFormMobileSubmitBtn.addEventListener('click', this.toggleSearchErrorPopup.bind(this));
 	// ~~~~~~~~~~~~~~~~~~~~~~REQUEST PAGE~~~~~~~~~~~~~~~~~~~~~~~~
-	if(this.personalDataForm) {
-		this.personalDataForm.addEventListener('click', this.placeholderGoUp.bind(this));
-	}
-	if(this.inputBabyChair) {this.inputBabyChair.addEventListener('blur', this.focusInput.bind(this));}
-	if(this.inputBabyChair)	{this.inputBabyChair.addEventListener('keypress', this.onlyNumbers.bind(this));}
+	this.personalDataForm.addEventListener('click', this.placeholderGoUp.bind(this));
+
+	this.inputBabyChair.addEventListener('blur', this.focusInput.bind(this));
+	this.inputBabyChair.addEventListener('keypress', this.onlyNumbers.bind(this));
 	
 	// Fixed route panel
 	window.addEventListener('scroll', this.fixedRoutePanel.bind(this));
@@ -189,23 +185,21 @@ TransferApp.prototype.toggleSearchErrorPopup = function(e) {
 TransferApp.prototype.placeholderGoUp = function (e) {
 	if(!this.personalDataForm) {return};
 
+	this.placeholderTemplate(e, 'name');
+	this.placeholderTemplate(e, 'phone');
+	this.placeholderTemplate(e, 'mail');
+	this.placeholderTemplate(e, 'flight');
+	this.placeholderTemplate(e, 'comment');
+	this.placeholderTemplate(e, 'promo');
+};
+
+TransferApp.prototype.placeholderTemplate = function(e, dataId) {
+
 	var target = e && e.target|| e.srcElement;
 
-	if(target.getAttribute('data-id') === 'name') {
+	if(target.getAttribute('data-id') === dataId) {
 		for (var i = 0; i < this.inpPersonalDataFormPlaceholders.length; i++) {
-			if(this.inpPersonalDataFormPlaceholders[i].getAttribute('data-placeholder') === 'name') {
-				this.inpPersonalDataFormPlaceholders[i].style.cssText = 'font-size: 14px; top: 20px; opacity: 1';
-			} 
-		}
-	} else if (target.getAttribute('data-id') === 'mail') {
-		for (var i = 0; i < this.inpPersonalDataFormPlaceholders.length; i++) {
-			if(this.inpPersonalDataFormPlaceholders[i].getAttribute('data-placeholder') === 'mail') {
-				this.inpPersonalDataFormPlaceholders[i].style.cssText = 'font-size: 14px; top: 20px; opacity: 1';
-			} 
-		}
-	} else if (target.getAttribute('data-id') === 'phone') {
-		for (var i = 0; i < this.inpPersonalDataFormPlaceholders.length; i++) {
-			if(this.inpPersonalDataFormPlaceholders[i].getAttribute('data-placeholder') === 'phone') {
+			if(this.inpPersonalDataFormPlaceholders[i].getAttribute('data-placeholder') === dataId) {
 				this.inpPersonalDataFormPlaceholders[i].style.cssText = 'font-size: 14px; top: 20px; opacity: 1';
 			} 
 		}

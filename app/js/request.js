@@ -4,28 +4,25 @@ var requestForm = function () {
 		personalDataForm = doc.getElementById('personalData'),
 		placeholders = doc.querySelectorAll('.placeholder');
 
-	var placeholderGoUp = function (e) {
-		var target = e && e.target|| e.srcElement;
+	var placeholder = function(e, dataAttr) {
+		var target = e && e.target || e.srcElement;
 
-		if(target.getAttribute('data-id') === 'name') {
+		if(target.getAttribute('data-id') === dataAttr) {
 			for (var i = 0; i < placeholders.length; i++) {
-				if(placeholders[i].getAttribute('data-placeholder') === 'name') {
+				if(placeholders[i].getAttribute('data-placeholder') === dataAttr) {
 					placeholders[i].style.cssText = 'font-size: 14px; top: 20px; opacity: 1';
 				} 
-			}
-		} else if (target.getAttribute('data-id') === 'mail') {
-			for (var i = 0; i < placeholders.length; i++) {
-				if(placeholders[i].getAttribute('data-placeholder') === 'mail') {
-					placeholders[i].style.cssText = 'font-size: 14px; top: 20px; opacity: 1';
-				} 
-			}
-		} else if (target.getAttribute('data-id') === 'phone') {
-			for (var i = 0; i < placeholders.length; i++) {
-				if(placeholders[i].getAttribute('data-placeholder') === 'phone') {
-					placeholders[i].style.cssText = 'font-size: 14px; top: 20px; opacity: 1';
-				} 
-			}
-		}
+			} 
+		} 
+	};
+
+	var placeholderGoUp = function(e) {
+		placeholder(e, 'name');
+		placeholder(e, 'phone');
+		placeholder(e, 'mail');
+		placeholder(e, 'flight');
+		placeholder(e, 'comment');
+		placeholder(e, 'promo');
 	};
 
 	var focusInput = function (e) {

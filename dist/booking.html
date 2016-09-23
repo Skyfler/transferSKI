@@ -128,7 +128,7 @@
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 clearfix">
 						<!-- page title -->
-						<h2 class="page_title request_title left">Transfer price request</h2>
+						<h2 class="page_title request_title left">Checkout</h2>
 						<!-- // page title -->
 						<!-- Page arrow back -->
 						<a href="index.html" class="page_back">
@@ -148,10 +148,10 @@
 		<!-- // Page title wrapper -->
 
 		<!-- Search form -->
-		<div class="search_wrapper search_wrapper-page">
+		<div class="search_wrapper search_wrapper-page search_wrapper-book">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-1 col-sm-12 col-xs-12">
+					<div class="col-md-8 col-md-offset-1 col-sm-11 col-xs-12">
 						<!-- Form wrapper -->
 						<div class="form_wrapper">
 							<!-- form -->
@@ -182,7 +182,7 @@
 								</div>
 								<!-- // TO -->
 								<!-- FROM -->
-								<div class="search_form-from search_form no-price text-left">
+								<div class="search_form-from search_form text-left">
 									<h3 class="search_form-title">From</h3>
 									<!-- direction -->
 									<div class="search_form-direction">
@@ -215,6 +215,15 @@
 						
 					</div>
 					<!-- //col -->
+
+					<!-- Price wrapper -->
+					<div class="col-md-2 col-sm-1">
+						<div class="price_wrapper">
+							<span class="transfer_price">30$</span>
+						</div>
+						<!-- //col -->
+					</div>
+					<!-- // Price wrapper -->
 				</div>
 				<!-- //row -->
 			</div>
@@ -223,7 +232,7 @@
 		<!-- //Search form -->
 		
 		<!-- Personality form wrapper -->
-		<div class="personality_form-wrapper">
+		<div class="book_form-wrapper">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
@@ -248,7 +257,12 @@
 							</div>
 							<div class="col-md-6 col-md-offset-1" >
 								<input type="text" class="personality-input" data-id="phone">
+								<span class="required">*</span>
 								<span class="placeholder" data-placeholder="phone">Phone number</span>
+							</div>
+							<div class="col-md-6 col-md-offset-1" >
+								<input type="text" class="personality-input" data-id="flight">
+								<span class="placeholder" data-placeholder="flight">Flight number</span>
 							</div>
 						</div>
 						<!-- // Personal data -->
@@ -272,6 +286,22 @@
 							<div class="col-md-6 col-md-offset-1">
 								<textarea class="personality-input personality-text" data-id="comment"></textarea>
 								<span class="placeholder placeholder_text" data-placeholder="comment">Comment</span>
+							</div>
+							
+	
+							<div class="col-md-6 col-md-offset-1">
+								<div class="promo_wrapper clearfix">
+									<input type="text" class="personality-input promo-input" data-id="promo">
+									<span class="placeholder" data-placeholder="promo">Promo</span>
+									<button class="search_submit promo-apply">Apply</button>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-md-offset-1">
+								<label for="acceptTerms" class="checkbox_label accept_terms-label clearfix">
+									<input id="acceptTerms" type="checkbox">
+									<span>I have read and accept terms and conditions</span>
+								</label>
 							</div>
 
 							<div class="col-md-10 col-md-offset-1">
@@ -336,6 +366,8 @@
 -->
 	<!-- Main file with scripts -->
 	<script src="js/request.js"></script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 </body>
 
