@@ -30,38 +30,78 @@ function TransferApp () {
 
 	this.init();
 	
-};
+}
 
 // Initial all methods
 TransferApp.prototype.init = function() {
 	// ShowLogo Event
 	window.addEventListener('scroll', this.showLogo.bind(this));
+
 	// Parallax
 	window.addEventListener('scroll', this.parallax.bind(this));
-	// Show/Hide mobile menu
-	this.menuCloseBtn.addEventListener('click', this.toggleMobileMenu.bind(this));
-	this.menuShowBtn.addEventListener('click', this.toggleMobileMenu.bind(this));
-	// Show/Hide FROM search form
-	this.searchFormShowBtn.addEventListener('click', this.toggleSearchForm.bind(this));
-	this.searchFormHideBtn.addEventListener('click', this.toggleSearchForm.bind(this));
-	// Change inputs value
-	this.arrowTo.addEventListener('click', this.changeInputs.bind(this));
-	this.arrowFrom.addEventListener('click', this.changeInputs.bind(this));
-	// Change form arrow direction
-	this.inputFromTo.addEventListener('focus', this.changeArrowActive.bind(this));
-	this.inputFromFrom.addEventListener('focus', this.changeArrowActive.bind(this));
-	// Show/Hide error transfer form popup
-	this.errorPopupHideBtn.addEventListener('click', this.toggleSearchErrorPopup.bind(this));
-	this.searchFormSubmitBtn.addEventListener('click', this.toggleSearchErrorPopup.bind(this));
-	this.searchFormMobileSubmitBtn.addEventListener('click', this.toggleSearchErrorPopup.bind(this));
-	// ~~~~~~~~~~~~~~~~~~~~~~REQUEST PAGE~~~~~~~~~~~~~~~~~~~~~~~~
-	this.personalDataForm.addEventListener('click', this.placeholderGoUp.bind(this));
 
-	this.inputBabyChair.addEventListener('blur', this.focusInput.bind(this));
-	this.inputBabyChair.addEventListener('keypress', this.onlyNumbers.bind(this));
+	// Show/Hide mobile menu
+	if (this.menuCloseBtn) {
+		this.menuCloseBtn.addEventListener('click', this.toggleMobileMenu.bind(this));
+	}
+	if (this.menuShowBtn) {
+		this.menuShowBtn.addEventListener('click', this.toggleMobileMenu.bind(this));
+	}
+
+	// Show/Hide FROM search form
+	if (this.searchFormShowBtn) {
+		this.searchFormShowBtn.addEventListener('click', this.toggleSearchForm.bind(this));
+	}
+	if (this.searchFormHideBtn) {
+		this.searchFormHideBtn.addEventListener('click', this.toggleSearchForm.bind(this));
+	}
+
+	// Change inputs value
+	if (this.arrowTo) {
+		this.arrowTo.addEventListener('click', this.changeInputs.bind(this));
+	}
+	if (this.arrowFrom) {
+		this.arrowFrom.addEventListener('click', this.changeInputs.bind(this));
+	}
+
+	// Change form arrow direction
+	if (this.inputFromTo) {
+		this.inputFromTo.addEventListener('focus', this.changeArrowActive.bind(this));
+	}
+	if (this.inputFromFrom) {
+		this.inputFromFrom.addEventListener('focus', this.changeArrowActive.bind(this));
+	}
+
+	// Show/Hide error transfer form popup
+	if (this.errorPopupHideBtn) {
+		this.errorPopupHideBtn.addEventListener('click', this.toggleSearchErrorPopup.bind(this));
+	}
+	if (this.searchFormSubmitBtn) {
+		this.searchFormSubmitBtn.addEventListener('click', this.toggleSearchErrorPopup.bind(this));
+	}
+	if (this.searchFormMobileSubmitBtn) {
+		this.searchFormMobileSubmitBtn.addEventListener('click', this.toggleSearchErrorPopup.bind(this));
+	}
+
+	// ~~~~~~~~~~~~~~~~~~~~~~REQUEST PAGE~~~~~~~~~~~~~~~~~~~~~~~~
+	if (this.personalDataForm) {
+		this.personalDataForm.addEventListener('click', this.placeholderGoUp.bind(this));
+	}
+	if (this.inputBabyChair) {
+		this.inputBabyChair.addEventListener('blur', this.inputFocus.bind(this));
+	}
+	if (this.inputBabyChair) {
+		this.inputBabyChair.addEventListener('keypress', this.onlyNumbers.bind(this));
+	}
+
 	
 	// Fixed route panel
-	window.addEventListener('scroll', this.fixedRoutePanel.bind(this));
+	if (this.routeWrapper) {
+		this._offsetPanelInitialTop = this.routeWrapper.offsetTop;
+		this.fixedRoutePanel();
+		window.addEventListener('scroll', this.fixedRoutePanel.bind(this));
+	}
+
 };
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MAIN PAGE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,7 +124,7 @@ TransferApp.prototype.showLogo = function() {
 TransferApp.prototype.parallax = function () {
 	if(!this.layers) {return};
 	var depth, movement, translate;
-		topDistance = window.pageYOffset;
+	var topDistance = window.pageYOffset;
 
 	for (var i = 0; i < this.layers.length; i++) {
 		depth = this.layers[i].getAttribute('data-depth');
@@ -213,7 +253,7 @@ TransferApp.prototype.inputFocus = function(e) {
 		val = parseInt(target.value);
 	if(target.id === 'babyChair' && val > 0) {
 		this.inputBabyChair.style.border = "2px solid #854cff";
-	} else if (val === 0 || val === NaN) {
+	} else if (val === 0 || isNaN(val)) {
 		this.inputBabyChair.style.border = "2px solid transparent";
 	}
 };
@@ -250,13 +290,15 @@ TransferApp.prototype.fixedRoutePanel = function () {
 
 	var topDistance = window.pageYOffset;
 
-	if(topDistance > this.offsetPanel) {
+	if(topDistance > this._offsetPanelInitialTop) {
 		this.routeWrapper.classList.add('route_wrapper--fixed');
-	} else if (topDistance < this.offsetPanel) {
+	} else if (topDistance < this._offsetPanelInitialTop) {
 		this.routeWrapper.classList.remove('route_wrapper--fixed');
 	}
 };
 
 
-window.addEventListener('DOMContentLoaded', new TransferApp());
+window.addEventListener('DOMContentLoaded', function() {
+	new TransferApp();
+});
 

@@ -10,9 +10,10 @@ DropDown.prototype = {
 		obj.dd.on('click', function(event){
 			$(this).toggleClass('active');
 			event.stopPropagation();
-		});	
+			event.preventDefault();
+		});
 	}
-}
+};
 
 $(function() {
 
