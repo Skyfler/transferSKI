@@ -131,6 +131,15 @@ var transferApp = function () {
 	searchFormSubmitBtn.addEventListener('click', showErrorPopup);
 	searchFormMobileSubmitBtn.addEventListener('click', showErrorPopup);
 
+	// Scroll to form
+	$('.route_wrapper').on('click', 'a.route_change-link', function (event) {
+		event.preventDefault();
+		var id = $(this).attr('href'),
+			top = $(id).offset().top;
+
+		$('html, body').animate({scrollTop: top}, 'slow');
+	});	
+
 	
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EVENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

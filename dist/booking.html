@@ -45,16 +45,16 @@
 							<div id="dd1" class="dropdown_wrap" tabindex="1">
 								<a href="#" class="first_item">RU</a>
 								<ul class="dropdown">
-									<li><a href="#">ENG</a></li>
+									<li><a href="#">EN</a></li>
 								</ul>
 							</div>
 							<!-- Dropdown language 2-->
 							<div id="dd2" class="dropdown_wrap" tabindex="1">
-								<a href="#" class="first_item">USD</a>
+								<a href="#" class="first_item">EUR</a>
 								<ul class="dropdown">
-									<li><a href="#">RUR</a></li>
-									<li><a href="#">EUR</a></li>
-									<li><a href="#">GBR</a></li>
+									<li><a href="#">USD</a></li>
+									<li><a href="#">GBP</a></li>
+									<li><a href="#">RUB</a></li>
 								</ul>
 							</div>
 						</div>
@@ -107,13 +107,14 @@
 
 			<ul class="mobile_language-list">
 				<li class="mobile_lang-item"><a href="#" class="active">RU</a></li>
-				<li class="mobile_lang-item"><a href="#">ENG</a></li>
+				<li class="mobile_lang-item"><a href="#">EN</a></li>
 			</ul>
 
 			<ul class="mobile_language-list">
-				<li class="mobile_lang-item"><a href="#" class="active">USD</a></li>
-				<li class="mobile_lang-item"><a href="#">EUR</a></li>
-				<li class="mobile_lang-item"><a href="#">GBR</a></li>
+				<li class="mobile_lang-item"><a href="#" class="active">EUR</a></li>
+				<li class="mobile_lang-item"><a href="#">USD</a></li>
+				<li class="mobile_lang-item"><a href="#">GBP</a></li>
+				<li class="mobile_lang-item"><a href="#">RUB</a></li>
 			</ul>
 		</div>
 		<!-- // Mobile menu -->
@@ -131,7 +132,7 @@
 						<h2 class="page_title request_title left">Checkout</h2>
 						<!-- // page title -->
 						<!-- Page arrow back -->
-						<a href="index.html" class="page_back">
+						<a href="result.html" class="page_back">
 							<svg class="page_back-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="198.5 390.5 17 13.1" enable-background="new 198.5 390.5 17 13.1" xml:space="preserve">
 								<path  d="M204.6,403.3l-5.9-5.9c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5l5.9-5.9c0.1-0.1,0.3-0.2,0.5-0.2
 								c0.2,0,0.3,0.1,0.5,0.2l0.9,0.9c0.3,0.3,0.3,0.7,0,0.9l-2.6,2.6c-0.2,0.3-0.1,0.6,0.2,0.6h10.9c0.4,0,0.7,0.3,0.7,0.7v1.3
@@ -148,7 +149,7 @@
 		<!-- // Page title wrapper -->
 
 		<!-- Search form -->
-		<div class="search_wrapper search_wrapper-page search_wrapper-book">
+		<div class="search_wrapper search_wrapper-page search_wrapper-book" id="searchWrapper">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-1 col-sm-11 col-xs-12">
@@ -232,7 +233,7 @@
 		<!-- //Search form -->
 		
 		<!-- Personality form wrapper -->
-		<div class="book_form-wrapper">
+		<div class="book_form-wrapper" id="bookWrapper">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
@@ -305,7 +306,7 @@
 							</div>
 
 							<div class="col-md-10 col-md-offset-1">
-								<input type="submit" class="search_submit search_submit-page" value="Send request">
+								<input type="submit" class="search_submit search_submit-page" value="Complete">
 							</div>
 						</div>
 						<!-- // Additionaly wrapper -->
@@ -367,6 +368,7 @@
 	<!-- Main file with scripts -->
 	<script src="js/select.js"></script>
 	<script src="js/common-oop.js"></script>
+    <script src="js/fixed-form.js"></script>
 
 	<!--<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>-->
 
