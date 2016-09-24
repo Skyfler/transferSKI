@@ -1,0 +1,96 @@
+@import '_vars.styl'
+
+
+// Tabs
+.faq_tabs
+	margin 55px 0
+.faq_tabs-link
+	display inline-block
+	color $title-color
+	opacity .4
+	font 20px 'FuturaBook', Arial, sans-serif
+	vertical-align middle
+	margin-right 185px
+	background transparent
+	border none
+	box-shadow none
+	outline none
+	&:last-child
+		margin-right 0
+	.tabs_item-ic
+		vertical-align middle
+		display inline-block
+		margin-right 15px
+		
+
+.ic-transfer
+	width 45px
+	height 46px
+	background url(../img/faq-sprite.png) no-repeat 0 0
+
+.ic-meeting
+	width 56px
+	height 56px
+	background url(../img/faq-sprite.png) no-repeat 0 -46px 
+.ic-trip
+	width 67px
+	height 45px
+	background url(../img/faq-sprite.png) no-repeat 0 -102px 
+
+// Active
+
+.tabs_link--active
+	opacity 1
+	.ic-transfer
+		background url(../img/faq-sprite.png) no-repeat -73px 0	
+	.ic-meeting
+		background url(../img/faq-sprite.png) no-repeat -67px -46px 
+	.ic-trip
+		background url(../img/faq-sprite.png) no-repeat -67px -102px
+		
+
+// Tabs content
+.faq_tab-info--item
+	min-height 670px
+	display block
+	margin-bottom 140px
+.faq_info--hidden
+	display none
+.faq_tab-title
+	font 20px 'FuturaHeavy', Arial, sans-serif
+	margin 0 0 25px 0
+	color $title-color
+	
+.faq_tab-text
+	line-height 30px
+	color $text-color
+	margin 0 0 55px 0
+	&:last-child
+			margin-bottom 0
+			
+// Mobile 
+
+.faq_title-mobile
+	display none
+	margin 0 0 50px 0
+	
+.faq_mobile-tabs
+	display none
+	.faq_mobile-item
+		margin-bottom 50px
+	.faq_tabs-link
+		margin-bottom 30px
+		font 20px 'FuturaHeavy', Arial, sans-serif
+		margin-right 0
+	.tabs_item-ic
+		margin-right 20px
+	.faq_tab-title
+		margin-bottom 20px
+	.faq_tab-text
+		margin-bottom 25px
+		line-height 18px
+		&:last-child
+			margin-bottom 0
+	
+	
+	
